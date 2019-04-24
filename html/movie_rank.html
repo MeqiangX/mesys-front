@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>榜单 - 明凯电影</title>
+
+    <!--jquery & select2-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+    <script src="../js/common/common.js"></script>
+
+    <script src="../js/common/utilTools.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+
+    <!-- 引用网络图片而导致 无法加载的解决方案 -->
+    <meta name="referrer" content="no-referrer">
+
+
+    <!--自己的资源文件-->
+
+    <script src="../js/mesys_movie_rank.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/mesys_movie_rank.css"/>
+
+</head>
+<body>
+
+<header class="header" id="header"></header>
+
+<div id="body">
+
+
+    <!--榜单列表导航栏-->
+    <div id="rank-navi-model" class="rank-navi-model">
+        <!-- 标签页区域 -->
+        <div id="box">
+            <ul id="tab_nav">
+                <li><a href="#t_1" class="choosed-rank" onclick="currentNavi(5,this)">本周口碑榜</a></li>
+                <li><a href="#t_2" onclick="currentNavi(3,this)">北美票房榜</a></li>
+                <li><a href="#t_3" onclick="currentNavi(2,this)">新片榜</a></li>
+                <li><a href="#t_4" onclick="currentNavi(0,this)">热映榜</a></li>
+                <li><a href="#t_5" onclick="currentNavi(1,this)">即将上映榜</a></li>
+                <li><a href="#t_6" onclick="currentNavi(4,this)">TOP100</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--可选 跟新时间段div-->
+    <div id="rank-update-record-model" class="rank-update-record-model">
+
+    </div>
+
+    <!-- 榜单列表 -->
+    <div id="rank-list-model" class="rank-list-model">
+        <div id="tab_content">
+
+            <!-- 本周口碑榜 -->
+            <div id="t_1">
+
+                <div id="week-rank-list" class="rank-list">
+
+                <!--    <div class="week-rank-item">
+
+                        <div class="rank-item-no">
+                            <p>1</p>
+                        </div>
+
+                        <div class="rank-item-img">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2437013616.jpg">
+                        </div>
+
+                        <div class="rank-item-info">
+
+                            <div class="rank-movie-info">
+                                <p class="rank-movie-name">电影名</p>
+                                <p class="rank-movie-casts">主演</p>
+                                <p class="rank-movie-pubdate">上映时间</p>
+                            </div>
+
+                            <div class="rank-movie-rating">
+                                <p class="rank-movie-rant">评分</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="week-rank-item">
+
+                        <div class="rank-item-no">
+                            <p>1</p>
+                        </div>
+
+                        <div class="rank-item-img">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2437013616.jpg">
+                        </div>
+
+                        <div class="rank-item-info">
+
+                            <div class="rank-movie-info">
+                                <p class="rank-movie-name">电影名</p>
+                                <p class="rank-movie-casts">主演</p>
+                                <p class="rank-movie-pubdate">上映时间</p>
+                            </div>
+
+                            <div class="rank-movie-rating">
+                                <p class="rank-movie-rant">评分</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="week-rank-item">
+
+                        <div class="rank-item-no">
+                            <p>1</p>
+                        </div>
+
+                        <div class="rank-item-img">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2437013616.jpg">
+                        </div>
+
+                        <div class="rank-item-info">
+
+                            <div class="rank-movie-info">
+                                <p class="rank-movie-name">电影名</p>
+                                <p class="rank-movie-casts">主演</p>
+                                <p class="rank-movie-pubdate">上映时间</p>
+                            </div>
+
+                            <div class="rank-movie-rating">
+                                <p class="rank-movie-rant">评分</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="week-rank-item">
+
+                        <div class="rank-item-no">
+                            <p>1</p>
+                        </div>
+
+                        <div class="rank-item-img">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2437013616.jpg">
+                        </div>
+
+                        <div class="rank-item-info">
+
+                            <div class="rank-movie-info">
+                                <p class="rank-movie-name">电影名</p>
+                                <p class="rank-movie-casts">主演</p>
+                                <p class="rank-movie-pubdate">上映时间</p>
+                            </div>
+
+                            <div class="rank-movie-rating">
+                                <p class="rank-movie-rant">评分</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="week-rank-item">
+
+                        <div class="rank-item-no">
+                            <p>1</p>
+                        </div>
+
+                        <div class="rank-item-img">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2437013616.jpg">
+                        </div>
+
+                        <div class="rank-item-info">
+
+                            <div class="rank-movie-info">
+                                <p class="rank-movie-name">电影名</p>
+                                <p class="rank-movie-casts">主演</p>
+                                <p class="rank-movie-pubdate">上映时间</p>
+                            </div>
+
+                            <div class="rank-movie-rating">
+                                <p class="rank-movie-rant">评分</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="week-rank-item">
+
+                        <div class="rank-item-no">
+                            <p>1</p>
+                        </div>
+
+                        <div class="rank-item-img">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2437013616.jpg">
+                        </div>
+
+                        <div class="rank-item-info">
+
+                            <div class="rank-movie-info">
+                                <p class="rank-movie-name">电影名</p>
+                                <p class="rank-movie-casts">主演</p>
+                                <p class="rank-movie-pubdate">上映时间</p>
+                            </div>
+
+                            <div class="rank-movie-rating">
+                                <p class="rank-movie-rant">评分</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="week-rank-item">
+
+                        <div class="rank-item-no">
+                            <p>1</p>
+                        </div>
+
+                        <div class="rank-item-img">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2437013616.jpg">
+                        </div>
+
+                        <div class="rank-item-info">
+
+                            <div class="rank-movie-info">
+                                <p class="rank-movie-name">电影名</p>
+                                <p class="rank-movie-casts">主演</p>
+                                <p class="rank-movie-pubdate">上映时间</p>
+                            </div>
+
+                            <div class="rank-movie-rating">
+                                <p class="rank-movie-rant">评分</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+-->
+                    </div>
+
+                </div>
+
+
+
+            <div id="t_2">
+                <div id="north-rank-list" class="rank-list">
+
+                </div>
+            </div>
+            <div id="t_3">
+                <div id="new-rank-list" class="rank-list">
+
+                </div>
+            </div>
+
+            <div id="t_4">
+                <div id="hot-rank-list" class="rank-list">
+
+                </div>
+            </div>
+            <div id="t_5">
+                <div id="comming-rank-list" class="rank-list">
+
+                </div>
+            </div>
+            <div id="t_6">
+                <div id="top100-rank-list" class="rank-list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分页组件 -->
+    <div id="rank-page-model" class="rank-page-model">
+
+        <div id="page-component" class="page-component">
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer id="footer" class="footer">
+
+</footer>
+</body>
+
+<script>
+    initNavi("rank_li");
+    rankList(WEEK_RANK,1,PAGE_SIZE);
+</script>
+
+</html>

@@ -1,0 +1,197 @@
+
+/* 搜索头 */
+.search-header-model {
+    width: 100%;
+    height: 8%;
+    background: #47464A;
+}
+
+
+/* 结果列表 */
+.search-result-model {
+    width: 100%;
+    height: 87%;
+}
+
+/* 分页组件 */
+.search-result-page-model {
+    width: 100%;
+    height: 5%;
+}
+
+
+
+
+/* 搜索头 header */
+.search-header-model .search-header {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 8%;
+}
+
+.search-header-model .search-header .search-input {
+    position: relative;
+    width: 80%;
+    height: 27%;
+    top: 35%;
+    font-size: 20px;
+}
+
+
+
+/*行*/
+.search-result-model .result-row{
+    position: relative;
+    left: 15%;
+    width: 70%;
+    height: 10%;
+    margin-top: 20px;
+}
+
+/*列*/
+.search-result-model .result-col{
+    position: absolute;
+    width: 45%;
+    height: 100%;
+}
+
+/*图片*/
+.result-img{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.result-img img{
+    width: 100%;
+    height: 100%;
+}
+
+/*电影信息*/
+.result-movie-info{
+    float: left;
+    width: 60%;
+    height: 100%;
+    border-bottom: 1px solid darkgray;
+}
+
+
+/*电影名*/
+.result-movie-info .result-name{
+    text-align: left;
+    padding-left: 30px;
+    font-size: 28px;
+    width: 100%;
+    height: 20%;
+    background: tan;
+    word-wrap: break-word;
+}
+
+/*电影原名*/
+.result-movie-info .result-original-name{
+    text-align: left;
+    font-size: 18px;
+    padding-left: 30px;
+    width: 100%;
+    height: 20%;
+    word-wrap: break-word;
+    color: #999999;
+}
+
+/*电影评分*/
+.result-movie-info .result-rating{
+    text-align: left;
+    font-size: 20px;
+    padding-left: 30px;
+    width: 100%;
+    height: 20%;
+    color: #FFA81F;
+}
+
+/*电影类别*/
+.result-movie-info .result-genres{
+    width: 100%;
+    height: 20%;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+/*电影上映时间*/
+.result-movie-info .result-pubdates{
+    width: 100%;
+    height: 20%;
+    text-align: left;
+    padding-left: 30px;
+    word-wrap: break-word;
+    color: #999999;
+}
+
+
+.search-result-model .result-col-right{
+    position: absolute;
+    left: 55%;
+    width: 45%;
+    height: 100%;
+}
+
+
+
+/*分页组件*/
+#search-result-page-model #page-component{
+    position: relative;
+    display: flex;
+    justify-content:center;/*内容水平居中*/
+    align-items:center; /*内容垂直居中*/
+    left: 5%;
+    width: 90%;
+    height: 100%;
+
+}
+
+
+
+#search-result-page-model #page-component .pre-page input{
+    width: 80px;
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+
+#search-result-page-model #page-component .page-num input{
+    width: 45px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+#search-result-page-model #page-component .next-page input{
+    width: 80px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+/*hover*/
+#search-result-page-model #page-component .next-page input:hover,#page-model-div #page-component .page-num input:hover,#page-model-div #page-component .pre-page input:hover{
+    border-color: #EF4238;
+}
+

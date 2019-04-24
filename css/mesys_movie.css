@@ -1,0 +1,397 @@
+
+/*搜索占15*/
+#search-model-div {
+    position: relative;
+    width: 90%;
+    height: 15%;
+    left: 5%;
+}
+
+/*过滤 占5 */
+#filter-model-div {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    height: 3%;
+}
+
+/*列表 占 70*/
+#movies-model-div {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+}
+
+/*分页占10*/
+#page-model-div {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    height: 2%;
+}
+
+
+
+
+
+
+/*搜索*/
+#search-model-div #search-model-inner{
+    position: relative;
+    left: 5%;
+    top: 10%;
+    width: 90%;
+    height: 82%;
+    border: 1px solid #EEEEEE;
+}
+
+/*类型*/
+#search-model-inner #type-model-div{
+    width: 100%;
+    height: 34%;
+}
+
+/*type - label*/
+#type-model-div #label-model-div{
+    position: absolute;
+    width: 10%;
+    height: 33%;
+}
+
+#type-model-div #label-model-div p{
+    position: relative;
+    top: 15%;
+    font-size: 18px;
+    font-family: 宋体;
+    color: gray;
+}
+
+/*items*/
+#type-model-div #type-items{
+    position: absolute;
+    left: 10%;
+    width: 90%;
+    height: 33%;
+}
+
+#type-items #type-items-up{
+    width: 100%;
+    height: 50%;
+}
+
+#type-items #type-items-down{
+    width: 100%;
+    height: 50%;
+}
+
+
+#type-items ul{
+    position: relative;
+    top: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 宋体;
+    height: 50%;
+}
+
+#type-items ul li{
+    float: left;
+    margin-left: 8px;
+}
+
+#type-items ul li a{
+    display:inline-block;
+    width:60px;
+    text-decoration: none;
+    color: #000;
+}
+
+#type-items ul li a:hover{
+    color: red;
+}
+
+
+/*line 1 */
+.line{
+    width: 96%;
+    position: absolute;
+    left: 2%;
+}
+
+#line-1 {
+    color: #EEEEEE;
+    top: 34%;
+}
+
+#line-2 {
+    top: 66%;
+}
+
+/*区域*/
+#search-model-inner #area-model-div{
+    width: 100%;
+    height: 33%;
+}
+
+/*area - label*/
+#area-model-div #area-label-model-div{
+    position: absolute;
+    width: 10%;
+    height: 33%;
+}
+
+#area-model-div #area-label-model-div p{
+    position: relative;
+    top: 15%;
+    font-size: 18px;
+    font-family: 宋体;
+    color: gray;
+}
+
+/*items*/
+#area-model-div #area-items{
+    position: absolute;
+    left: 10%;
+    width: 90%;
+    height: 33%;
+}
+
+#area-items #area-items-up{
+    width: 100%;
+    height: 50%;
+}
+
+#area-items #area-items-down{
+    width: 100%;
+    height: 50%;
+}
+
+
+#area-items ul{
+    position: relative;
+    top: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 宋体;
+}
+
+#area-items ul li{
+    float: left;
+    margin-left: 0px;
+}
+
+#area-items ul li a{
+    display:block;
+    width:70px;
+    text-decoration: none;
+    color: #000;
+}
+
+#area-items ul li a:hover{
+    color: red;
+}
+
+/*年份*/
+#search-model-inner #year-model-div{
+    width: 100%;
+    height: 33%;
+}
+
+/*year - label*/
+#year-model-div #year-label-model-div{
+    position: absolute;
+    width: 10%;
+    height: 33%;
+}
+
+#year-model-div #year-label-model-div p{
+    position: relative;
+    top: 15%;
+    font-size: 18px;
+    font-family: 宋体;
+    color: gray;
+}
+
+/*items*/
+#year-model-div #year-items{
+    position: absolute;
+    left: 10%;
+    width: 90%;
+    height: 33%;
+}
+
+#year-items #year-items-up{
+    width: 100%;
+    height: 50%;
+}
+
+#year-items #year-items-down{
+    width: 100%;
+    height: 50%;
+}
+
+
+#year-items ul{
+    position: relative;
+    top: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 宋体;
+}
+
+#year-items ul li{
+    float: left;
+    margin-left: 4px;
+}
+
+#year-items ul li a{
+    display:block;
+    width:80px;
+    text-decoration: none;
+    color: #000;
+}
+
+#year-items ul li a:hover{
+    color: red;
+}
+
+
+/*被选中的type class*/
+#type-items ul .choosed-type,#year-items ul .choosed-type,#area-items ul .choosed-type{
+    color: red;
+}
+
+
+/*过滤*/
+
+#filter-model-div #filter-model-inner{
+    position: relative;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 10%;
+}
+
+#filter-model-inner #sorts {
+    position: relative;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+    font-family: 宋体;
+    top: 20px;
+}
+
+#filter-model-inner #sorts input{
+    margin-left: 20px;
+}
+
+
+
+/*电影列表*/
+#movies-model-div #movies-list-model{
+    position: relative;
+    left: 5%;
+    height: 100%;
+    width: 90%;
+}
+
+#movies-list-model .movies-row{
+    height: 15%;
+    width: 100%;
+    margin-top: 32px;
+}
+
+#movies-list-model .movies-row .movie{
+    float: left;
+    height: 100%;
+    width: 18%;
+    margin-left: 18px;
+}
+
+#movies-list-model .movies-row .movie img{
+    height: 80%;
+    width: 100%;
+}
+
+#movies-list-model .movies-row .movie .movie-name{
+    width: 100%;
+    height: 10%;
+    font-size: 19px;
+    font-family: 宋体;
+    text-align: center;
+}
+
+#movies-list-model .movies-row .movie .movie-rating{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 18px;
+    font-family: 宋体;
+    color: #FFA81F;
+}
+
+
+/*分页组件*/
+#page-model-div #page-component{
+    position: relative;
+    display: flex;
+    justify-content:center;/*内容水平居中*/
+    align-items:center; /*内容垂直居中*/
+    left: 5%;
+    width: 90%;
+    height: 100%;
+
+}
+
+
+
+#page-model-div #page-component .pre-page input{
+    width: 80px;
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+
+#page-model-div #page-component .page-num input{
+    width: 45px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+#page-model-div #page-component .next-page input{
+    width: 80px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+/*hover*/
+#page-model-div #page-component .next-page input:hover,#page-model-div #page-component .page-num input:hover,#page-model-div #page-component .pre-page input:hover{
+    border-color: #EF4238;
+}
+
+/*  当前页  用class 来控制*/

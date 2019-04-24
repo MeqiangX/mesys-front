@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--前后端跨域 请求 ajax jsonp 测试 -->
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+<h2>访问本地文件 普通ajax get function </h2>
+<button type="button" class="commonAjax" id="commonAjax">访问本地文件 不跨域 (ip 端口 协议)</button>
+
+<h2>访问后台 跨域jsonp </h2>
+<button type="button" class="jsonpButton" id="jsonpButton">访问后台 跨域</button>
+</body>
+
+<script>
+
+    // 普通 jquery ajax
+
+    $("#commonAjax").click(function () {
+        $.get("../data/testJson",function (data,status) {
+            alert("数据：" + data + " 状态 ： " + status);
+        })
+    });
+
+    // 请求参数都相同  $.get/post(url,data,function) 不同在于 $.getJSON()/$.postJSON()
+
+    $("#jsonpButton").click(function () {
+        $.get("http://127.0.0.1:8082/api/portal/movie/movie-rank",
+            {
+                rankType : "0", // 榜单表名类型 看后端的 MovieRankEnum
+                current: 1,
+                size: 100
+            },
+            function (data,status) {
+            alert("数据：" + data.data + "状态：" + status);
+        })
+    });
+
+
+</script>
+</html>

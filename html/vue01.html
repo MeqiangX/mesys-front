@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue01</title>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+<!--变量绑定-->
+<div id="app">
+    {{ message }}
+</div>
+
+<div id="app2">
+    <span v-bind:title="message">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </span>
+</div>
+
+<!--条件-->
+<div id="app-3">
+    <p v-if="seen">
+        现在你可以看到我了 vue 控制 app-3 seen 的变量
+    </p>
+</div>
+
+
+<!--循环-->
+<div id="app-4">
+    <ol>
+        <li v-for="obj in objs">
+            {{obj.text}}
+        </li>
+    </ol>
+</div>
+
+<!--绑定事件-->
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">逆转消息</button>
+</div>
+
+<!--定义组件 抽象-->
+<div id="app-6">
+    <ol>
+        <component-item></component-item>
+    </ol>
+</div>
+
+<!--动态模板组件-->
+
+<div id="app-7">
+    <ol>
+        <dynamic-component-item
+        v-for="obj in groceryList"
+        v-bind:item = "obj"
+        v-bind:key = "obj.id"
+        >
+            <!--key 相当于提交的值 item 是循环的变量在 js中设置的 循环的值赋值给它
+            groceryList 要在js 中定义-->
+
+        </dynamic-component-item>
+    </ol>
+</div>
+
+
+<!--数据和方法-->
+<!--Vue实例暴露了一些属性和方法，用$前缀来标识 用来区分普通属性
+eg:
+var data = {a : 2}
+var vm = new Vue({el: '#app',data:{a:1}})
+vm.$data = data ; ==> true
+vm.$el = document.getElementById('example'); ==> true
+
+// 这是其中的一个方法  会在a的值改变后调用 更多方法查询API
+vm.$watch('a',function(newValue,oldValue){ //todo })
+-->
+
+
+<!--实例生命周期钩子-->
+<!--每个Vue实例在被创建的过程中都要经历一系列的初始化过程 如： 设置数据监听，编译模板 并将实例
+挂载到el DOM上并在数据时跟新DOM  这些个过程中也会运行一些叫做生命钩子的函数 ，用户可以用这些钩子函数
+在不同时段添加自己的代码-->
+
+<div id="app-8">
+
+</div>
+
+
+<!--计算属性-->
+<!--用于替换模板内的复杂表达式 {{message.split('').reverse().join('')}}-->
+<div id="example">
+    <p>Original Message: {{ message }}</p>
+    <p>Reverse Message : {{ message.split('').reverse().join('') }}</p>
+    <p>Reverse Message(计算属性) : {{ reverseMessage }}</p>
+    <!--这里如果是用一个js方法来替换 这个计算属性 也是可以的 但是他们的区别在于
+    计算属性是基于他们的响应式依赖进行缓存的，即只有在message的值改变的时候 才会去重新计算，
+    而Js方式 不存在说缓存 只要修改message 就会修改 所以这时用计算属性的好处
+    这里一个前提是 响应式依赖 以及 缓存 因为message 设置到响应式 所以计算属性会对这个进行缓存
+    而如果是Date.now() 这种非响应式的 那么计算属性的值将不会改变  注意
+    如果不希望缓存 则用方法来替换-->
+</div>
+
+
+<!--监听属性-->
+<!--情景：一些数据需要随着另外一些数据来改变 watch 监听属性-->
+<!--但通常来说 监听属性一般可以用 计算属性替代 且更加简洁-->
+<div id="demo">
+    {{ fullName }}
+    {{changedName}}
+</div>
+
+<!--计算属性的setter 默认是只有getter 但也可以加上setter-->
+<div id="sld">
+    {{ message }}
+    {{ changeMessage }}
+</div>
+
+<!--监听器 watch 上提过-->
+<!-- 是这样 虽然计算属性也可以完成对属性值变化的操作 但是watch 提供了一个更通用的方法来响应数据的
+变化 当需要在数据变化执行异步请求时候 这个方式是最有用的-->
+
+<!--评分-->
+<template>
+    <div class="rate" :class="{'disabled':disabled}">
+        <i v-for="i in 5" class="iconfont" @mouseenter="disabled?'':curScore=i" @mouseleave="disabled?'':curScore=''" @click="disabled?'':setScore(i)" :class="getClass(i)">
+            <i v-if="disabled&&i==Math.floor(score)+1" class="iconfont icon-star" :style="'width:'+width"></i>
+        </i>
+        <span v-if="showText" class="text">{{curScore||score}}分</span>
+    </div>
+</template>
+
+只读，不显示数字：<my-rate :score="1.5" disabled/>
+只读，显示数字：<my-rate :score="3.6" disabled showText/>
+鼠标点击评分,显示数字：<my-rate :score.sync="curScore" showText/>
+<button @click="submit">提交</button>
+
+<script>
+    export default {
+        name:'MyRate',
+        props: {
+            score: {
+                type: Number,
+                default: 0,
+                //required: true
+            },
+            disabled: {
+                type: Boolean,
+                default: false,
+            },
+            showText: {
+                type: Boolean,
+                default: false,
+            },
+        },
+        data() {
+            return {
+                curScore: '',
+                width:'',
+            }
+        },
+        created: function () {
+            this.getDecimal();
+        },
+        methods: {
+            getClass(i) {
+                if (this.curScore === '') {
+                    return i <= this.score ? 'icon-star' : 'icon-star-o'
+                } else {
+                    return i <= this.curScore ? 'icon-star' : 'icon-star-o'
+                }
+            },
+            getDecimal() {
+                this.width=Number(this.score * 100 - Math.floor(this.score) * 100)+'%';
+            },
+            setScore(i){
+                this.$emit('update:score',i);//使用`.sync`修饰符，对score 进行“双向绑定
+            }
+        }
+    }
+</script>
+
+<script src="../js/index.js"></script>
+</body>
+</html>

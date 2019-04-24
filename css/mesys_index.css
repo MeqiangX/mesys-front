@@ -1,0 +1,503 @@
+
+
+
+
+/* 内容主体 样式*/
+
+/*轮播图*/
+#carousel {
+    width: 100%;
+    height: 22%;
+    text-align: center;
+}
+
+#carousel-rank {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 22%;
+}
+
+#carousel-rank #carousel-title {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    height: 10%;
+}
+
+#carousel-rank #carousel-title span{
+    float: left;
+    font-size: 30px;
+    color: #EF4238;
+    padding-top: 20px;
+    top: 20px
+}
+
+#carousel-rank #carousel-title a{
+    float: right;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 20px;
+    color: #EF4238;
+}
+
+#carousel-rank .swiper-container {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 90%;
+
+}
+.swiper-container .movieImage{
+     display: block;
+     width: 250px;
+     height: 320px;
+     margin-left: 50px;
+     margin-top: 50px;
+}
+
+
+
+.swiper-container p{
+    display: block;
+    text-align: center;
+    margin-left: 50px;
+    width: 250px;
+    left: 20px;
+}
+
+.swiper-container .movie-name {
+    display: block;
+    font-size: 18px;
+    color: red;
+    margin-top: 5px;
+}
+
+.swiper-container .rankAndStar{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 45px;
+    padding-top: 5px;
+}
+
+.swiper-container .star {
+    position: relative;
+    left: 20px;
+}
+
+.swiper-container .score{
+    position: relative;
+    left: 60px;
+    bottom: 23px;
+    color: #FFA81F;
+    font-size: 18px;
+}
+
+.swiper-container input{
+    position: relative;
+    top: 25px;
+    font-size: 18px;
+    letter-spacing: 20px;
+    display: block;
+    width: 250px;
+    height: 40px;
+    margin-left: 50px;
+    color: #EF4238;
+    background: #FFFFFF;
+    border: none;
+}
+
+.swiper-container input:hover{
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #EF4238;
+}
+
+
+/*即将上映*/
+#comingRank {
+    width: 100%;
+    height: 45%;
+    background: #FFFFFF;
+}
+
+#comingRank-rank {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 45%;
+}
+
+#comingRank-rank .comingRank-title{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    height: 10%;
+}
+
+#comingRank-rank .comingRank-title span{
+    float: left;
+    font-size: 30px;
+    color: #2D98F4;
+    padding-top: 20px;
+    top: 20px
+}
+
+#comingRank-rank .comingRank-title a{
+    float: right;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 20px;
+    color: #2D98F4;
+}
+
+#comingRank-rank .comingRank-body{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 90%;
+}
+
+.comingRank-body .comming-list{
+    width: 100%;
+    height: 100%;
+    border-collapse: separate; /*边框分离模式*/
+    border-spacing: 10px 20px; /*水平 垂直*/
+}
+
+.comingRank-body .comming-list table,td,th{
+    width: 25%;
+}
+
+
+
+.comming-list .movieImage{
+    width: 250px;
+    height: 320px;
+}
+
+.movie-name{
+    display: block;
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+}
+
+.comming-list .rankAndStar{
+    display: block;
+    text-align: center;
+    width: 25%;
+    padding-top: 5px;
+}
+
+.comming-list .rankAndStar .star{
+    position: relative;
+    left: 90px;
+}
+
+.comming-list .score{
+    position: relative;;
+    left: 115px;
+    color: #FFA81F;
+    font-size: 18px;
+}
+
+
+.comming-list-button-group{
+    display: block;
+    top: 30px;
+    width: 100%;
+}
+
+
+
+
+.comming-list-button-preView,.comming-list-button-prePurchase{
+    width: 130px;
+    height: 30px;
+    font-size: 16px;
+    letter-spacing: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Adobe 宋体 Std L";
+    color: #2D98F4;
+    background: #FFFFFF;
+    border: 1px solid beige;
+    border-radius: 5px;
+}
+
+.comming-list-button-preView:hover,.comming-list-button-prePurchase:hover{
+    color: #FFFFFF;
+    background: #2D98F4;
+}
+
+
+
+
+
+
+
+
+
+
+
+    /*热播榜*/
+#hotRank {
+    width: 100%;
+    height: 42%;
+}
+
+
+#hotRank-rank {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 42%;
+}
+
+#hotRank-rank-left{
+    float: left;
+    position: relative;
+    width: 70%;
+    height: 100%;
+}
+
+#hotRank-rank-right{
+    float: left;
+    width: 30%;
+    height: 100%;
+    left: 70%;
+    background: #FFF;
+}
+
+
+#hotRank-rank .hotRank-rank-title span{
+    float: left;
+    font-size: 30px;
+    color: #EF4238;
+    padding-top: 20px;
+    top: 20px
+}
+
+#hotRank-rank .hotRank-rank-title a{
+    float: right;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 20px;
+    color: #EF4238;
+}
+
+#hotRank-rank .hotRank-navi{
+    position: relative;
+    left: 25px;
+    top: 10px;
+}
+
+#hotRank-rank .hotRank-navi ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#hotRank-rank .hotRank-navi ul li{
+    float:left;
+}
+
+#hotRank-rank .hotRank-navi ul li a{
+    display: inline;
+    width:88px
+}
+
+#hotRank-rank-left .movie-name{
+    float: left;
+}
+
+#hotRank-rank-left .score{
+    position: relative;
+    color: #FFA81F;
+    font-size: 18px;
+    left: 1px;
+    top: 5px;
+}
+
+#hotRank-rank-left .movieImage{
+    width: 200px;
+    height: 280px;
+}
+
+#hotRank-rank-left table{
+    border: none;
+    margin: 20px;
+    padding-top: 50px;
+    border-collapse: separate;
+    border-spacing: 20px 20px;
+}
+
+#hotRank-rank-left table .hotRank-td-1 img{
+    width: 400px;
+    height: 280px;
+}
+
+
+#hotRank-rank-right{
+
+}
+
+
+#hotRank-rank-right #hotRank-rank-right-title{
+    width: 100%;
+    height: 15%;
+}
+
+#hotRank-rank-right #hotRank-rank-right-title #left{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#hotRank-rank-right #hotRank-rank-right-title #right{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#hotRank-rank-right #hotRank-rank-right-title span{
+    position: relative;
+    clear: left;
+    font-size: 30px;
+    color:  #FFB400;
+    padding-top: 20px;
+    top: 60px;
+}
+
+#hotRank-rank-right #hotRank-rank-right-title a{
+    position: relative;
+    clear: left;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 20px;
+    color:  #FFB400;
+    top: 70px;
+}
+
+#hotRank-rank-right #hotRank-rank-right-rankBody{
+    width: 100%;
+    height: 85%;
+}
+
+#hotRank-rank-right #hotRank-rank-right-rankBody #top100-list-navi ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+
+
+#hotRank-rank-right #hotRank-rank-right-rankBody #top100-list-navi ul li{
+    padding: 5px;
+    background: #FFF;
+}
+
+
+
+
+#hotRank-rank-right #hotRank-rank-right-rankBody #top100-list-navi {
+    width:100%;
+    height: 100%;
+}
+
+#hotRank-rank-right #hotRank-rank-right-rankBody #top100-list-navi table{
+    width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 10px 3px;
+}
+
+#hotRank-rank-right #hotRank-rank-right-rankBody #top100-list-navi table .rank-item-1{
+    width: 100%;
+    height: 90px;
+}
+
+.rank-item-1 img{
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+#rank-item-descrip-1 {
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
+/*电影名*/
+#rank-item-descrip-1 .rank-item-movie{
+    position: relative;
+    font-size: 21px;
+    right: 90px;
+    top: 30px;
+    color: #000;
+}
+
+/*评分*/
+#rank-item-descrip-1 .rank-item-point{
+    position: relative;
+    right: 100px;
+    top: 35px;
+    color: #FFB400;
+}
+
+
+/* rank 2-3 */
+#hotRank-rank-right #hotRank-rank-right-rankBody #top100-list-navi table .rank-item-2{
+    width: 100%;
+    height: 50px;
+}
+
+/*除了第一名 其他的通用这个div 然后只有 排名的颜色不同 */
+.rank-item-descrip {
+    width: 100%;
+    height: 100%;
+}
+
+/*rank */
+.rank-item-descrip .rank-no-pre3{
+    float: left;
+    position: relative;
+    font-size: 20px;
+    top: 12px;
+    left: 5px;
+    color: #FFB400;
+}
+
+/*在rank3 之后的 rank name css*/
+.rank-item-descrip .rank-no-affer3{
+    float: left;
+    position: relative;
+    font-size: 20px;
+    top: 12px;
+    left: 5px;
+    color: #999999;
+}
+
+/*电影名*/
+.rank-item-descrip .rank-item-movie{
+    float: left;
+    position: relative;
+    font-size: 20px;
+    top: 12px;
+    left: 30px;
+    color: #000;
+}
+
+/*评分*/
+.rank-item-descrip .rank-item-point{
+    float: right;
+    position: relative;
+    top: 12px;
+    color: #FFB400;
+}
+
+

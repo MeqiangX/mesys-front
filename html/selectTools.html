@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+
+    <script src="../js/selectmenu.js" type="text/javascript"></script>
+
+    <link href="../css/selectmenu.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-3">
+        <button type="button" class="btn btn-default" id="selectMenuProvince">选择省份 <i class="fa fa-caret-down"></i></button>
+        选择的省份：<kbd id="kbdSelectedProvince">无</kbd>
+    </div>
+    <div class="col-md-3">
+        <input type="text" id="selectPageCity" class="form-control" placeholder="请选择城市" >
+    </div>
+</div>
+
+</select>
+
+</body>
+
+<script>
+
+    //定义省和城市的数据，仅作演示
+    var province = [
+        {id:'001',name:'广东'},
+        {id:'002',name:'福建'},
+        {id:'003',name:'河北'},
+        {id:'004',name:'江苏'},
+        {id:'005',name:'浙江'}
+    ];
+
+    $('#selectMenuProvince').click(function(){
+        $(this).selectMenu({
+            showField : 'name',
+            keyField : 'id',
+            data : province,
+            eSelect: function(data){
+                if(data && data.length){
+                    $('#kbdSelectedProvince').text(data[0].name);
+                    //刷新城市的列表数据
+                    var arr = new Array();
+                    $.each(city, function(i,row){
+                        if(row.pId === data[0].id) arr.push(row);
+                    });
+                    if(arr.length) $('#selectPageCity').selectPageData(arr);
+                }
+            }
+        });
+    });
+    //初始化SelectPage
+    $('#selectPageCity').selectPage({
+        showField: 'name',
+        keyField: 'id',
+        data: [],
+        eSelect: function(data){
+            if(data)
+                bDialog.alert('您选择了 <b>'+$('#selectMenuProvince').selectMenuValues()[0].name+'</b> 省 <b>'+data.name+'</b> 市！');
+        }
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影 - 明凯电影</title>
+
+    <!--jquery & select2-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+    <script src="../js/common/common.js"></script>
+
+    <script src="../js/common/utilTools.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+
+    <!-- 引用网络图片而导致 无法加载的解决方案 -->
+    <meta name="referrer" content="no-referrer">
+
+
+    <!-- 自己的 资源文件 js css 等-->
+    <script src="../js/mesys_movie.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/mesys_movie.css"/>
+
+</head>
+<body>
+
+<header id="header" class="header"></header>
+
+<div id="body">
+
+    <!-- 搜索 div -->
+    <div id="search-model-div" class="search-model-div">
+
+        <div id="search-model-inner" class="search-model-inner">
+            <!--电影类型的筛选-->
+            <div id="type-model-div" class="type-model-div">
+
+                <!-- label -->
+                <div id="label-model-div" class="label-model-div">
+                    <p>类型: </p>
+                </div>
+
+                <!-- items -->
+
+                <div id="type-items" class="type-items">
+
+                    <div id="type-items-up" class="type-items-up">
+
+                        <ul>
+                            <li><a href="javascript:void(0)" class="choosed-type" onclick="reflushMovieList(0,this)">全部</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">爱情</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">喜剧</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">动画</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">剧情</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">恐怖</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">惊悚</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">科幻</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">动作</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">悬疑</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">犯罪</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">冒险</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">战争</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">奇幻</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">运动</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">家庭</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div id="type-items-down" class="type-items-down">
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">古装</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">武侠</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">西部</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">历史</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">传记</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">歌舞</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">黑色电影</a></li>
+                            <li><a href="javascript:void(0)"  onclick="reflushMovieList(0,this)">短片</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">记录片</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">其他</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--<hr class="line" id="lint-1"/>-->
+            <hr class="line" id="line-1"/>
+
+            <!--电影地区的筛选-->
+            <div id="area-model-div" class="area-model-div">
+                <!-- label -->
+                <div id="area-label-model-div" class="area-label-model-div">
+                    <p>区域: </p>
+                </div>
+
+                <!-- items -->
+
+                <div id="area-items" class="area-items">
+
+                    <div id="area-items-up" class="area-items-up">
+
+                        <ul>
+                            <li><a href="javascript:void(0)" class="choosed-type" onclick="reflushMovieList(1,this)">全部</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">大陆</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">美国</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">韩国</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">日本</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">中国香港</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">中国台湾</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">泰国</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">印度</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">法国</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">英国</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">俄罗斯</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">意大利</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">西班牙</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">德国</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div id="area-items-down" class="area-items-down">
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">波兰</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">澳大利亚</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">伊朗</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(1,this)">其他</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="line" id="line-2"/>
+
+            <!--电影年代的筛选-->
+            <div id="year-model-div" class="year-model-div">
+                <!-- label -->
+                <div id="year-label-model-div" class="year-label-model-div">
+                    <p>年代: </p>
+                </div>
+
+                <!-- items -->
+
+                <div id="year-items" class="year-items">
+
+                    <div id="year-items-up" class="year-items-up">
+
+                        <ul>
+                            <li><a href="javascript:void(0)" class="choosed-type" onclick="reflushMovieList(2,this)">全部</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2019以后</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2019</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2018</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2017</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2016</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2015</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2014</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2013</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2013</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">2000-2010</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">90年代</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">80年代</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div id="year-items-down" class="year-items-down">
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">70年代</a></li>
+                            <li><a href="javascript:void(0)" onclick="reflushMovieList(2,this)">更早</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 筛选checkBox -->
+    <div id="filter-model-div" class="filter-model-div">
+
+        <!--只有 按照 时间  评价(分) 热门(即是去热门榜里面找)-->
+        <div id="filter-model-inner" class="filter-model-inner">
+
+            <div id="sorts" class="sorts">
+                <input type="radio" name="filter-type" value="0" checked onclick="radioFlushMovies()">按热门排序
+                <input type="radio" name="filter-type" value="1" onclick="radioFlushMovies()">按时间排序
+                <input type="radio" name="filter-type" value="2" onclick="radioFlushMovies()">按评价排序
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- 电影列表 -->
+    <div id="movies-model-div" class="movies-model-div">
+
+        <!-- 之前两个页面的经验 一行为一个div 向下扩展-->
+
+        <div id="movies-list-model" class="movies-list-model">
+
+        <!--    <div id="movies-row" class="movies-row">
+
+               &lt;!&ndash; <div id="movie" class="movie">
+                    <img src="">
+                    <p class="movie-name">电影名</p>
+                    <p class="movie-rating">评分</p>
+                </div>
+
+                <div id="movie2" class="movie">
+                    <img src="">
+                    <p class="movie-name">电影名</p>
+                    <p class="movie-rating">评分</p>
+                </div>&ndash;&gt;
+
+            </div>-->
+
+        </div>
+
+
+    </div>
+
+    <!--分页 div -->
+    <div id="page-model-div" class="page-model-div">
+
+        <div id="page-component" class="page-component">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer id="footer" class="footer"></footer>
+
+</body>
+
+<script>
+    initNavi("movie_li");
+    movieListResult(1,30);
+</script>
+
+</html>

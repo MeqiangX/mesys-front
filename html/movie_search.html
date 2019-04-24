@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果 - 明凯电影</title>
+
+    <!--jquery-->
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+
+    <script src="../js/common/common.js"></script>
+
+    <script src="../js/common/utilTools.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+
+    <!-- 引用网络图片而导致 无法加载的解决方案 -->
+    <meta name="referrer" content="no-referrer">
+
+
+    <script src="../js/mesys_movie_search.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/mesys_movie_search.css">
+
+
+</head>
+<body>
+
+<header id="header" class="header">
+
+</header>
+
+
+<div id="body">
+
+    <!-- 搜索头 10% -->
+    <div id="search-header-model" class="search-header-model">
+
+        <div id="search-header" class="search-header">
+
+            <!-- 搜索框 -->
+             <input type="search" id="search-input" class="search-input" placeholder="电影，演员，导演">
+
+        </div>
+
+    </div>
+
+    <!-- 结果列表 80% -->
+    <div id="search-result-model" class="search-result-model">
+
+       <!-- <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="result-row">
+
+            <div class="result-col">
+
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+
+            </div>
+
+            <div class="result-col-right">
+                <div class="result-img">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541901817.jpg">
+                </div>
+
+                <div class="result-movie-info">
+                    <p class="result-name">电影名</p>
+                    <p class="result-original-name">原名</p>
+                    <p class="result-rating">评分</p>
+                    <p class="result-genres">类别</p>
+                    <p class="result-pubdates">上映时间</p>
+                </div>
+            </div>
+
+        </div>-->
+    </div>
+
+    <!-- 分页组件 5% -->
+    <div id="search-result-page-model" class="search-result-page-model">
+        <div id="page-component" class="page-component">
+
+        </div>
+    </div>
+
+</div>
+
+<footer id="footer" class="footer">
+
+</footer>
+
+</body>
+
+<script>
+    search(1,18,'');
+</script>
+
+</html>

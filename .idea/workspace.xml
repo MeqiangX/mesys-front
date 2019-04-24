@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e693caf-a334-4ed5-a3fd-2ef9e9da0611" name="Default" comment="" />
+    <list default="true" id="4e693caf-a334-4ed5-a3fd-2ef9e9da0611" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/css/mesys_cinema_choose_movie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/mesys_movie_choose_cinema.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/cinema_choose_movie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/movie_choose_cinema.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/mesys_cinema_choose_movie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/mesys_movie_choose_cinema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mesys_movie_detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mesys_movie_detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/movie_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/movie_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/common/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mesys_movie_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_movie_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mesys_movie_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_movie_index.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,80 +27,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cinema.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/cinema.html">
+      <file leaf-file-name="mesys_cinema_choose_movie.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/mesys_cinema_choose_movie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="135">
+              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+              <folding>
+                <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
+      <file leaf-file-name="cinema_choose_movie.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/cinema_choose_movie.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
+            <state relative-caret-position="267">
+              <caret line="104" column="59" lean-forward="true" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mesys_movie_rank.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/mesys_movie_rank.js">
+      <file leaf-file-name="mesys_cinema_choose_movie.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/mesys_cinema_choose_movie.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9856">
-              <caret line="448" selection-start-line="448" selection-end-line="448" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mesys_movie.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/mesys_movie.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5456">
-              <caret line="248" selection-start-line="163" selection-end-line="248" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mesys_cinema.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/mesys_cinema.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/common/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="110" column="31" lean-forward="true" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/common/common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mesys_cinema.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/mesys_cinema.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1562">
-              <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+            <state relative-caret-position="295">
+              <caret line="228" column="16" lean-forward="true" selection-start-line="228" selection-start-column="16" selection-end-line="228" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -99,8 +73,8 @@
       <list>
         <option value="Vue Single File Component" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -132,14 +106,17 @@
       <find>rank-page-model</find>
       <find>rank-list</find>
       <find>movies-row</find>
-      <find>rating</find>
       <find>page</find>
       <find>pageComp</find>
       <find>page-component</find>
+      <find>rating</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -162,7 +139,6 @@
         <option value="$PROJECT_DIR$/html/common/footer.html" />
         <option value="$PROJECT_DIR$/html/indexCopy.html" />
         <option value="$PROJECT_DIR$/js/common/utilTools.js" />
-        <option value="$PROJECT_DIR$/css/mesys_movie_detail.css" />
         <option value="$PROJECT_DIR$/js/mesys_index.js" />
         <option value="$PROJECT_DIR$/css/mesys_index.css" />
         <option value="$PROJECT_DIR$/css/mesys_movie.css" />
@@ -176,15 +152,23 @@
         <option value="$PROJECT_DIR$/html/movie_rank.html" />
         <option value="$PROJECT_DIR$/html/common/header.html" />
         <option value="$PROJECT_DIR$/html/movie.html" />
-        <option value="$PROJECT_DIR$/html/movie_detail.html" />
-        <option value="$PROJECT_DIR$/js/mesys_movie_detail.js" />
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/html/init_model.html" />
         <option value="$PROJECT_DIR$/html/cinema.html" />
         <option value="$PROJECT_DIR$/css/common/common.css" />
         <option value="$PROJECT_DIR$/js/mesys_cinema.js" />
         <option value="$PROJECT_DIR$/css/mesys_cinema.css" />
+        <option value="$PROJECT_DIR$/css/mesys_movie_detail.css" />
+        <option value="$PROJECT_DIR$/css/mesys_movie_choose_cinema.css" />
+        <option value="$PROJECT_DIR$/js/mesys_movie_index.js" />
         <option value="$PROJECT_DIR$/js/common/common.js" />
+        <option value="$PROJECT_DIR$/js/mesys_movie_detail.js" />
+        <option value="$PROJECT_DIR$/html/movie_detail.html" />
+        <option value="$PROJECT_DIR$/js/mesys_movie_choose_cinema.js" />
+        <option value="$PROJECT_DIR$/html/movie_choose_cinema.html" />
+        <option value="$PROJECT_DIR$/js/mesys_cinema_choose_movie.js" />
+        <option value="$PROJECT_DIR$/css/mesys_cinema_choose_movie.css" />
+        <option value="$PROJECT_DIR$/html/cinema_choose_movie.html" />
       </list>
     </option>
   </component>
@@ -197,11 +181,13 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="304" />
-    <option name="y" value="54" />
-    <option name="width" value="908" />
-    <option name="height" value="648" />
+    <option name="width" value="1022" />
+    <option name="height" value="644" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -214,6 +200,21 @@
             <path>
               <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -278,24 +279,24 @@
       <workItem from="1555809101459" duration="28907000" />
       <workItem from="1555898220071" duration="28362000" />
       <workItem from="1555981625897" duration="25038000" />
-      <workItem from="1556068247980" duration="609000" />
+      <workItem from="1556068247980" duration="28820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260490000" />
+    <option name="totallyTimeSpent" value="288701000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="245" y="49" width="908" height="648" extended-state="0" />
+    <frame x="304" y="0" width="1022" height="644" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2679372" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17097415" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50224215" side_tool="true" visible="true" weight="0.23376623" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.17892644" side_tool="true" visible="true" weight="0.27340823" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.82107353" visible="true" weight="0.27340823" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -319,49 +320,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4972">
-          <caret line="226" column="9" lean-forward="true" selection-start-line="226" selection-start-column="9" selection-end-line="226" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/vue01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="127" column="10" lean-forward="true" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.vue" />
     <entry file="file://$PROJECT_DIR$/component/star.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
@@ -442,13 +400,6 @@
     <entry file="file://$PROJECT_DIR$/js/jquery-ui.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mesys_index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="93" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/star.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -457,13 +408,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/movie_rank.js" />
-    <entry file="file://$PROJECT_DIR$/css/mesys_movie_detail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/jsonpTest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -482,6 +426,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="172" column="33" lean-forward="true" selection-start-line="172" selection-start-column="33" selection-end-line="172" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -527,34 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/movie_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="206" column="6" lean-forward="true" selection-start-line="206" selection-start-column="6" selection-end-line="206" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mesys_movie_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="232" column="126" selection-start-line="232" selection-start-column="65" selection-end-line="232" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mesys_movie_detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2348">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/init_model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="34" lean-forward="true" selection-end-line="38" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/movie_rank.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -572,13 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/cinema.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/common/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -593,43 +507,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mesys_cinema.css">
+    <entry file="file://$PROJECT_DIR$/js/mesys_movie_rank.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+        <state relative-caret-position="233">
+          <caret line="448" selection-start-line="448" selection-end-line="448" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mesys_movie_rank.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mesys_cinema.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9856">
-          <caret line="448" selection-start-line="448" selection-end-line="448" />
+        <state>
+          <caret lean-forward="true" selection-end-line="161" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mesys_cinema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        <state relative-caret-position="1645">
+          <caret line="147" column="1" lean-forward="true" selection-start-line="3" selection-end-line="147" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
+    <entry file="file://$PROJECT_DIR$/html/cinema.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
+        <state relative-caret-position="185">
+          <caret line="261" lean-forward="true" selection-start-line="261" selection-end-line="261" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/movie_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="71" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="71" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/common/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="110" column="31" lean-forward="true" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+        <state relative-caret-position="251">
+          <caret line="146" column="65" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="65" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mesys_movie_choose_cinema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/init_model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="34" lean-forward="true" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mesys_movie_choose_cinema.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="118" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/movie_choose_cinema.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="68" column="10" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="68" selection-end-column="10" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mesys_movie_detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="137" column="51" lean-forward="true" selection-start-line="136" selection-start-column="4" selection-end-line="137" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="28" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mesys_index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="83" column="25" lean-forward="true" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mesys_movie_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mesys_movie_detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mesys_cinema_choose_movie.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="228" column="16" lean-forward="true" selection-start-line="228" selection-start-column="16" selection-end-line="228" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/cinema_choose_movie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="104" column="59" lean-forward="true" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mesys_cinema_choose_movie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

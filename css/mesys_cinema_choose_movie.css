@@ -1,0 +1,371 @@
+/*图片信息区域*/
+.image-info{
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top right,#392F59,#5F4284);  /*渐变*/
+}
+
+
+.image-info .image{
+    position: absolute;
+    width: 280px;
+    height: 400px;
+    left: 150px;
+    top: 120px;
+}
+
+.image-info .image #image-src{
+    width: 320px;
+    height: 400px;
+}
+
+.image-info .cinema-info{
+    position: absolute;
+    left: 500px;
+    top: 120px;
+    width: 700px;
+    height: 200px;
+    color: #FFFFFF;
+}
+
+
+
+.image-info .cinema-info .cinema-name{
+    text-align: left;
+    font-size: 30px;
+    width: 100%;
+    height: 38%;
+    word-wrap: break-word;
+}
+
+.image-info .cinema-info .cinema-addr{
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+    height: 27%;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+
+.image-info .cinema-info .cinema-phone{
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+}
+
+
+/* 电影轮播图 */
+.cinema-under-movie-model{
+    position: absolute;
+    top: 23%;
+    left: 5%;
+    width: 90%;
+    height: 11%;
+    background: gainsboro;
+}
+
+.swiper-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide{
+    position: relative;
+    top: 20px;
+    width: 8%;
+    height: 80%;
+    background: lightcoral;
+    border: 4px solid white;
+}
+
+.chooseMovie{
+    top: 15px;
+    width: 30%;
+    height: 85%;
+    border: 4px solid #F24030;
+}
+
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 电影信息 */
+.movie-short-message-model{
+    position: absolute;
+    left: 5%;
+    top: 34%;
+    width: 90%;
+    height: 5%;
+    border-bottom: 1px solid gainsboro;
+}
+
+
+/* 电影信息 1  */
+.message-model-1{
+    width: 100%;
+    height: 50%;
+}
+
+.message-model-1 .movie-name{
+    position: absolute;
+    width: 20%;
+    height: 60px;
+    text-align: left;
+    line-height: 60px;
+    font-size: 25px;
+    word-wrap: break-word;
+}
+
+.message-model-1 .movie-rating{
+    position: absolute;
+    left: 20%;
+    width: 20%;
+    height: 60px;
+    text-align: left;
+    line-height: 60px;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+
+/* 电影信息 2 */
+.message-model-2{
+    width: 100%;
+    height: 50%;
+}
+
+.message-model-2 .duration{
+    position: absolute;
+    width: 12%;
+    height: 60px;
+    text-align: left;
+    line-height: 60px;
+    word-wrap: break-word;
+}
+
+.message-model-2 .type{
+    position: absolute;
+    left: 12%;
+    width: 12%;
+    height: 60px;
+    text-align: left;
+    line-height: 60px;
+    word-wrap: break-word;
+}
+
+.message-model-2 .casts{
+    position: absolute;
+    left: 24%;
+    width: 70%;
+    height: 60px;
+    text-align: left;
+    line-height: 60px;
+    word-wrap: break-word;
+}
+
+
+/*选场次模块*/
+.screen-choose-model{
+    position: absolute;
+    left: 5%;
+    top: 39%;
+    width: 90%;
+    height: 63%;
+}
+
+/*  时间模块 */
+.screen-choose-model .time-model{
+    position: relative;
+    width: 100%;
+    height: 5%;
+}
+
+/*时间label*/
+.show-time-label-model{
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    line-height: 80px;
+    color: darkgray;
+}
+
+
+/* 时间节点导航 */
+.time-list-model{
+    position: absolute;
+    left:10%;
+    height: 100%;
+    width: 90%;
+}
+
+.time-list-model ul{
+    position: absolute;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    height: 100%;
+    line-height: 80px;
+}
+
+.time-list-model ul a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.time-list-model ul li{
+    padding: 7px;
+    margin: 10px;
+    border-radius: 25px;
+    color: #FFFFFF;
+    background: #F03D37;
+    display:inline;
+}
+
+.time-list-model ul .no-choose{
+    color: #000;
+}
+
+
+/*场次模块*/
+.screen-choose-model .screen-arrange-model{
+    position: relative;
+    width: 100%;
+    height: 94%;
+}
+
+.table-model{
+    width: 100%;
+    height: 100%;
+}
+
+
+.table-header {
+    width: 100%;
+    height: 6%;
+    background: #F7F7F7;
+}
+
+
+.col{
+    position: absolute;
+    width: 20%;
+    height: 6%;
+    text-align: center;
+    line-height: 90px;
+    font-size: 23px;
+    font-family: 黑体;
+}
+
+.time-col{
+}
+
+.table-header .language-col{
+    left: 20%;
+}
+
+.table-header .screen-col{
+    left: 40%;
+}
+
+.table-header .price-col{
+    left: 60%;
+}
+
+.table-header .purchase-col{
+    left: 80%;
+}
+
+.table-body{
+    width: 100%;
+    height: 85%;
+}
+
+/* 没有背景色 */
+.table-body-row {
+    width: 100%;
+    height: 6%;
+}
+
+/*有背景色*/
+.table-body-row-back{
+    background: #F7F7F7;
+}
+
+.body-col{
+    position: absolute;
+    width: 20%;
+    height: 74px;
+    text-align: center;
+    line-height: 74px;
+}
+
+.body-time-col {
+
+}
+
+.body-time-col .start{
+    line-height: 37px;
+    font-size: 21px;
+    font-family: 黑体;
+    height: 50%;
+}
+
+.body-time-col .end{
+    color: #999999;
+    line-height: 37px;
+    height: 50%;
+}
+
+.body-language-col{
+    font-size: 18px;
+    left: 20%;
+}
+
+.body-screen-col{
+    font-size: 18px;
+    left: 40%;
+}
+
+.body-price-col {
+    color: #F03D37;
+    left: 60%;
+}
+
+.body-price-col .price-num{
+    font-size: 20px;
+}
+
+.body-button-col {
+    font-size: 18px;
+    left: 80%;
+}
+
+.body-button-col button{
+    background: #F03D37;
+    color: #FFFFFF;
+    cursor: pointer;
+    width: 100px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.body-button-col button:hover{
+    background: #FF5E59;
+}
+
+.table-footer {
+    width: 100%;
+    height: 8%;
+}
+
+
+
+
+
+
+

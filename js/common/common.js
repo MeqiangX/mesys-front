@@ -98,9 +98,7 @@ function initNavi(pageTypeCode){
     //  设置 当前在哪个页面的navi - class - css   // 在页面跳转的时候 会带上这个区域id 如果没有则不考虑
 
     if (oneReq.length == 0){
-        console.log(oneReq);
         initSelectOption();
-        console.log(oneReq);
     }
 
     // header 加载
@@ -119,7 +117,7 @@ function initNavi(pageTypeCode){
 
             // 渲染完成之后 选择 之前选择的 areaId
             if (null != getParamFromURI("areaId")){
-                console.log(getParamFromURI("areaId"));
+                console.log("当前uri中有上个页面带来的areaid : "+getParamFromURI("areaId"));
                 select2.val(getParamFromURI("areaId")).trigger("change");
             }
 

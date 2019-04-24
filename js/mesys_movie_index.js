@@ -32,7 +32,7 @@ function hotRankData(){
             for (var i = 0;i < data.data.records.length;i++,starOrScoreNum++){
                 var item = data.data.records[i];
                 str = str + "<div class=\"swiper-slide\">\n" +
-                    "                    <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                    "                    <a href=\""+ "movie_detail.html?movieId=" + item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                     "                    <img class=\"movieImage\" src= " + "\"" + item.image + "\">\n" +
                     "                    </a>\n" +
                     "                    <p class=\"movie-name\">"+ item.movieName + "</p>\n" +
@@ -76,7 +76,7 @@ function commingRankData(){
                 if (i == 0 || i == 4){
                     str = str + "<tr>\n" +
                         "                            <td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                    <img class=\"movieImage\" src=\"" + item.image + "\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -92,7 +92,7 @@ function commingRankData(){
                         "                            </td>\n";
                 }else if (i == 3 || i == 7){
                     str = str + "<td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+item.movieName+"</p>\n" +
@@ -109,7 +109,7 @@ function commingRankData(){
                         "                        </tr>\n";
                 }else {
                     str = str + "<td>\n" +
-                        "                                <a href=\"" + "movie_detail.html?movieId="+ item.movieId  +"\">\n" +
+                        "                                <a href=\"" + "movie_detail.html?movieId="+ item.movieId  + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+item.movieName+ "</p>\n" +
@@ -152,7 +152,7 @@ function newRankData(){
                 if (i == 0){
                     str = str + " <tr>\n" +
                         "                            <td  class=\"hotRank-td-1\" colspan=\"2\">\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -161,7 +161,7 @@ function newRankData(){
 
                 }else if (i == 2 || i == 6){
                     str = str + "<td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -171,7 +171,7 @@ function newRankData(){
                 }else if (i == 3){
                     str = str + " <tr>\n" +
                         "                            <td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -179,7 +179,7 @@ function newRankData(){
                         "                            </td>\n";
                 }else{
                     str = str + " <td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -215,7 +215,7 @@ function top100RankData(){
                 if (i == 0){
                     str = str + " <tr>\n" +
                         "                                    <td>\n" +
-                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                            <div class=\"rank-item-1\" id=\"rank-item-1\">\n" +
                         "                                                <img src=\""+ item.image +"\">\n" +
                         "                                                <div id=\"rank-item-descrip-1\">\n" +
@@ -230,7 +230,7 @@ function top100RankData(){
                 }else if (i == 1 || i == 2){
                     str = str + "<tr>\n" +
                         "                                    <td>\n" +
-                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                            <div class=\"rank-item-2\">\n" +
                         "                                                <div class=\"rank-item-descrip\">\n" +
                         "                                                    <p class=\"rank-no-pre3\">"+ (i+1) +"</p>\n" +
@@ -244,7 +244,7 @@ function top100RankData(){
                 }else {
                     str = str + "<tr>\n" +
                         "                                    <td>\n" +
-                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId +"\">\n" +
+                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
                         "                                            <div class=\"rank-item-2\">\n" +
                         "                                                <div class=\"rank-item-descrip\">\n" +
                         "                                                    <p class=\"rank-no-affer3\">"+ (i+1) +"</p>\n" +

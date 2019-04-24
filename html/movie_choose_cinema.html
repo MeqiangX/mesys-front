@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影院 - 明凯电影</title>
+
+    <!--jquery 和 下拉控件-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+    <!--star-->
+    <script src="../js/jquery.raty.js" type="text/javascript"></script>
+
+    <script src="../js/common/common.js"></script>
+
+    <script src="../js/common/utilTools.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+
+    <!-- 引用网络图片而导致 无法加载的解决方案 -->
+    <meta name="referrer" content="no-referrer">
+
+    <!--自己的css js-->
+    <script src="../js/mesys_movie_choose_cinema.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/mesys_movie_choose_cinema.css">
+
+
+
+</head>
+<body>
+
+<header id="header" class="header">
+
+</header>
+
+
+<div id="body">
+
+    <!--图片信息展示区 -->
+    <div class="image-info">
+        <div class="image">
+            <img id="image-src"/>
+        </div>
+
+        <div class="movie-info">
+            <p class="movie-name" id="movie-name"></p>
+            <p class="movie-ori-name"></p>
+            <p class="movie-genres"></p>
+            <p class="countries-duration"></p>
+            <p class="pubdates"></p>
+        </div>
+
+        <div class="purchase-button">
+            <input type="button" class="purchase" value="查看更多电影详情"/>
+        </div>
+
+        <div class="rating-info">
+            <p class="movie-rating-title">电影评分</p>
+            <div class="rating-model">
+                <div class="star">
+                </div>
+                <span class="score"></span>
+            </div>
+            <p class="movie-rating-count-title">评分人数</p>
+            <p class="movie-rating-count"></p>
+        </div>
+    </div>
+
+    <!-- 影院列表 -->
+    <div id="cinema-list-model" class="cinema-list-model">
+
+        <div id="cinema-list-title" class="cinema-list-title">
+
+            <p>影院列表</p>
+
+        </div>
+
+        <div id="cinema-list" class="cinema-list">
+
+            <!-- <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                    <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>
+             <div class="cinema-item">
+
+                 <div class="cinema-info">
+                     <p class="cinema-name">影院名称</p>
+                     <p class="cinema-address">影院地址</p>
+                 </div>
+
+                 <div class="order-seat-model">
+
+                     <a class="order-button" href="javascript:void(0)">选座购票</a>
+
+                 </div>
+
+             </div>-->
+        </div>
+
+        <div id="cinema-list-page" class="cinema-list-page">
+
+            <div id="page-component" class="page-component">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer id="footer" class="footer">
+
+</footer>
+
+</body>
+
+<script>
+    initNavi("cinema_li");
+    init(); // 初始化电影信息
+    initCinema(1,PAGE_SIZE); // 初始化影院信息
+</script>
+
+</html>

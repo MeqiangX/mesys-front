@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XX(影院名称) - 明凯电影</title>
+
+    <!--jquery 和 下拉控件-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+    <script src="../js/common/common.js"></script>
+
+    <script src="../js/common/utilTools.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+
+    <!-- 引用网络图片而导致 无法加载的解决方案 -->
+    <meta name="referrer" content="no-referrer">
+
+    <!--引入swwiper 轮播图插件-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+
+
+    <!-- 自己的css 和 js -->
+    <script src="../js/mesys_cinema_choose_movie.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/mesys_cinema_choose_movie.css">
+
+
+</head>
+<body>
+
+<header id="header" class="header">
+
+</header>
+
+
+<div id="body">
+
+    <!--图片信息展示区 -->
+    <div class="image-info">
+        <div class="image">
+            <img id="image-src"/>
+        </div>
+
+        <div class="cinema-info">
+            <p class="cinema-name" id="cinema-name"></p>
+            <p class="cinema-addr"></p>
+            <p class="cinema-phone"></p>
+        </div>
+    </div>
+
+
+    <!-- 影院下被排片的电影列表 轮播图 非自动轮播 -->
+    <div class="cinema-under-movie-model" id="cinema-under-movie-model">
+
+        <div class="swiper-container">
+
+            <div class="swiper-wrapper" id="swiper-warpper">
+
+            </div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- &lt;!&ndash; 如果需要滚动条 &ndash;&gt;
+             <div class="swiper-scrollbar"></div>-->
+        </div>
+
+    </div>
+
+    <!-- 电影基本信息 -->
+    <div id="movie-short-message-model" class="movie-short-message-model">
+
+        <div class="message-model-1">
+            <p class="movie-name"></p>
+            <p class="movie-rating"></p>
+        </div>
+
+        <div class="message-model-2">
+            <p class="duration">时长：<span class="duration-text">120分钟</span></p>
+            <p class="type">类型：<span class="type-text">科幻</span></p>
+            <p class="casts">主演：<span class="casts-text">xxx,xxx</span></p>
+        </div>
+    </div>
+
+    <!-- 选场次模块 -->
+    <div id="screen-choose-model" class="screen-choose-model">
+
+        <!-- 时间模块 -->
+        <div id="time-model" class="time-model">
+
+            <div class="show-time-label-model">
+                观影时间：
+            </div>
+
+            <div class="time-list-model">
+
+                <ul>
+                    <li><a href="javascript:void(0)">4月24日</a></li>
+                    <li><a href="javascript:void(0)" class="no-choose">4月24日</a></li>
+                    <li><a href="javascript:void(0)">4月24日</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- 场次模块 -->
+        <div id="screen-arrange-model" class="screen-arrange-model">
+
+            <!-- 用div 做table  -->
+            <div class="table-model">
+
+                <!-- 表头 -->
+                <div class="table-header">
+
+                    <div class="col time-col">
+                        放映时间
+                    </div>
+
+                    <div class="col language-col">
+                        语言版本
+                    </div>
+
+                    <div class="col screen-col">
+                        放映厅
+                    </div>
+
+                    <div class="col price-col">
+                        售价（元）
+                    </div>
+
+                    <div class="col purchase-col">
+                        选座购票
+                    </div>
+
+                </div>
+
+                <!-- 体 -->
+                <div class="table-body">
+
+                    <div class="table-body-row table-body-row-no-back">
+
+                        <div class="body-col body-time-col">
+
+                                <p class="start">10:05</p>
+                                <p class="end">12:00 散场</p>
+
+                        </div>
+
+                        <div class="body-col body-language-col">
+                            中文2D
+                        </div>
+
+                        <div class="body-col body-screen-col">
+                            放映厅
+                        </div>
+
+                        <div class="body-col body-price-col">
+                            <span>￥</span><span class="price-num">66</span>
+                        </div>
+
+                        <div class="body-col body-button-col">
+                            <button type="button">选座购票</button>
+                        </div>
+
+                    </div>
+
+                    <div class="table-body-row table-body-row-back">
+
+                        <div class="body-col body-time-col">
+
+                            <p class="start">10:05</p>
+                            <p class="end">12:00 散场</p>
+
+                        </div>
+
+                        <div class="body-col body-language-col">
+                            中文2D
+                        </div>
+
+                        <div class="body-col body-screen-col">
+                            放映厅
+                        </div>
+
+                        <div class="body-col body-price-col">
+                            <span>￥</span><span class="price-num">66</span>
+                        </div>
+
+                        <div class="body-col body-button-col">
+                            <button type="button">选座购票</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 表脚 -->
+                <div class="table-footer">
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer id="footer" class="footer">
+
+</footer>
+
+</body>
+
+<script>
+
+    initNavi();
+    initCinemaInfo(6);
+
+</script>
+
+</html>

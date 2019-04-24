@@ -226,3 +226,11 @@ function star(){
         }
     });
 }
+
+
+
+/* 优惠购票 跳转*/
+function dumpToPurchase(obj) {
+    var thisObj = $(obj);
+    thisObj.attr("href","movie_choose_cinema.html?movieId=" +  getParamFromURI("movieId") + "&areaId=" +   getSelectedAreaId());
+}

@@ -1,0 +1,283 @@
+/*图片信息区域*/
+.image-info{
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top right,#392F59,#5F4284);  /*渐变*/
+}
+
+
+.image-info .image{
+    position: absolute;
+    width: 280px;
+    height: 400px;
+    left: 150px;
+    top: 120px;
+}
+
+.image-info .image #image-src{
+    width: 280px;
+    height: 400px;
+}
+
+.image-info .movie-info{
+    position: absolute;
+    left: 450px;
+    top: 120px;
+    width: 300px;
+    height: 200px;
+}
+
+.image-info .movie-info p {
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.image-info .movie-info .movie-name{
+    font-size: 33px;
+}
+
+.image-info .movie-info .movie-ori-name{
+    font-size: 20px;
+}
+
+.image-info .movie-info .movie-genres{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.image-info .movie-info .countries-duration{
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.image-info .movie-info .pubdates{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.image-info .purchase-button{
+    position: absolute;
+    left: 450px;
+    top: 400px;
+    width: 300px;
+    height: 50px;
+    background: salmon;
+}
+
+
+.image-info .purchase-button .purchase{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    background: #DF2D2D;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-style: hidden;
+    border-radius: 2px;
+    outline: none;
+}
+
+.image-info .rating-info{
+    position: absolute;
+    left: 800px;
+    top: 300px;
+    width: 200px;
+    height: 160px;
+    text-align: left;
+}
+
+.image-info .rating-info .movie-rating-title{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.image-info .rating-info .rating-model{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.image-info .rating-info .rating-model .star{
+    display: inline-block;
+    width: 130px;
+    height: 20px;
+}
+
+.image-info .rating-info .rating-model .score{
+    color: #FFA81F;
+    font-size: 18px;
+}
+
+.image-info .rating-info .movie-rating-count-title{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.image-info .rating-info .movie-rating-count{
+    padding-top: 10px;
+    font-size: 28px;
+    color: #F4C600;
+}
+
+
+
+/* 影院列表 model */
+.cinema-list-model{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 22%;
+}
+
+/* 标题 */
+.cinema-list-title{
+    position: relative;
+    width: 90%;
+    height: 5%;
+    left: 5%;
+}
+
+.cinema-list-title p{
+    position: absolute;
+    text-align: center;
+    line-height: 110px;
+    width: 150px;
+    height: 110px;
+    font-size: 23px;
+}
+
+/*列表*/
+.cinema-list{
+    position: relative;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+}
+
+/*列表 item */
+.cinema-item{
+    position: relative;
+    width: 90%;
+    height: 7%;
+    left: 5%;
+    border-bottom: 1px solid gainsboro;
+}
+
+/*影院info*/
+.cinema-info{
+    position: relative;
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+/*影院名*/
+.cinema-name{
+    font-size: 20px;
+    text-align: left;
+    line-height: 60px;
+    width: 100%;
+    height: 50%;
+}
+
+.cinema-name-a{
+    color: #000;
+    text-decoration: none;
+}
+
+.cinema-name-a:hover{
+    color: red;
+}
+
+/*影院地址*/
+.cinema-address{
+    text-align: left;
+    line-height: 60px;
+    font-size: 17px;
+    color: grey;
+}
+
+/*订座button*/
+.order-seat-model{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 80%;
+}
+
+.order-button {
+    position: relative;
+    top: 50px;
+    font-size: 18px;
+    padding: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 20px;
+    background: red;
+}
+
+/*分页*/
+.cinema-list-page{
+    position: relative;
+    width: 90%;
+    height: 5%;
+    left: 5%;
+}
+
+
+
+/*分页组件*/
+.cinema-list-page #page-component{
+    position: relative;
+    display: flex;
+    justify-content:center;/*内容水平居中*/
+    align-items:center; /*内容垂直居中*/
+    left: 5%;
+    width: 90%;
+    height: 100%;
+
+}
+
+
+
+.cinema-list-page #page-component .pre-page input{
+    width: 80px;
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+
+.cinema-list-page #page-component .page-num input{
+    width: 45px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+.cinema-list-page #page-component .next-page input{
+    width: 80px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+/*hover*/
+.cinema-list-page #page-component .next-page input:hover,.cinema-list-page #page-component .page-num input:hover,.cinema-list-page #page-component .pre-page input:hover{
+    border-color: #EF4238;
+}

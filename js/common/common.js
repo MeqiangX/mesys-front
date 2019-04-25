@@ -120,7 +120,6 @@ function initNavi(pageTypeCode){
                 console.log("当前uri中有上个页面带来的areaid : "+getParamFromURI("areaId"));
                 select2.val(getParamFromURI("areaId")).trigger("change");
             }
-
         }
     });
 

@@ -41,7 +41,7 @@ function pushCinemaList(itemList) {
         str = str + "  <div class=\"cinema-item\">\n" +
             "\n" +
             "                <div class=\"cinema-info\">\n" +
-            "                    <a class='cinema-name-a' href=\"javascript:void(0)\"><p class=\"cinema-name\">"+ itemList[i].cinemaName +"</p></a>\n" +
+            "                    <a class='cinema-name-a' href=\"cinema_choose_movie.html?cinemaId= "+ itemList[i].id + " &areaId=" + getSelectedAreaId() + "\"><p class=\"cinema-name\">"+ itemList[i].cinemaName +"</p></a>\n" +
             "                    <p class=\"cinema-address\">地址："+ itemList[i].cinemaFullAddress +"</p>\n" +
             "                </div>\n" +
             "\n" +

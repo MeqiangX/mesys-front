@@ -31,9 +31,11 @@ function initCinemaInfo(cinemaId){
 /* 填充影院信息 */
 function putCinemaInfo(item) {
     $("#image-src").attr("src",item.image); // 图片
+    $(".cinema-id-hidden").attr("value",item.id);
     $(".cinema-name").append(item.cinemaName);
     $(".cinema-addr").append(item.cinemaFullAddress);
     $(".cinema-phone").append("电话："+item.phone);
+
 }
 
 
@@ -108,20 +110,163 @@ function baseInfoPush(movieId) {
 }
 
 
-/* 填充排片列表 */
-function movieArrangeListPush() {
+/* 填充排片时间标签列表 */
+function movieArrangeListPush(movieId,date) {
 
+    // 根据电影id 以及影院id 查找对应的排片情况记录 (不需要cinemaId 只要movieId,以及日期)
 
-    // 根据电影id 以及影院id 查找对应的排片情况记录
+    //当没有日期的时候 (初始化) 默认选中第一个日期
+
+    // 否则渲染参数日期的 排片
+
+    var item = new Object();
+
+    for (var i = 0;i < movieArrange.length;++i){
+        if (movieArrange[i].movieId == movieId){
+            item = movieArrange[i];
+            break;
+        }
+    }
+
+    if (item == null){
+        return 1;
+    }
+
+    if (undefined == date){
+
+        // 渲染第一个
+        var arrangeList = item.movieArrangeList;
+
+        var str = new String();
+
+        for (var j = 0;j < arrangeList.length;++j){
+            if (j == 0 && arrangeList.length == 1){
+                str = str + " <ul>\n" +
+                    "                    <li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">" +  arrangeList[j].arrangeDate +"</a></li>" +
+                    "</ul>\n";
+            }else if (j == 0){
+                str = str + "  <ul>\n" +
+                    "                    <li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" name=\"" +  arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+  arrangeList[j].arrangeDate +"</a></li>\n";
+            }else if (j == arrangeList.length-1){
+                str = str + " <li class=\"no-choose\"><a class='no-choose' href=\"javascript:void(0)\" name=\"" +  arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+  arrangeList[j].arrangeDate +"</a></li>\n" +
+                    "                </ul>\n";
+            }else{
+                str = str + "  <li class=\"no-choose\"><a href=\"javascript:void(0)\" class=\"no-choose\" name=\"" +  arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+  arrangeList[j].arrangeDate +"</a></li>\n";
+            }
+        }
+    }else{
+        // 渲染所给的 时间
+        str = str + "<ul>\n";
+        for (var j = 0;j < arrangeList.length;++j){
+            if (arrangeList[j].arrangeDate == date){
+                str = str + "<li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+ arrangeList[j].arrangeDate +"</a></li>\n";
+            }else{
+                str = str + "<li class=\"no-choose\"><a href=\"javascript:void(0)\" class=\"no-choose\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+ arrangeList[j].arrangeDate +"</a></li>\n";
+            }
+        }
+        str = str + "</ul>\n";
+    }
 
     // 填充时间标签
-
 
     //  选择第一个
 
 
+    $(".time-list-model").empty();
+    $(".time-list-model").append(str);
+
+    // 渲染后 触发一次渲染排片列表事件  在每个的时间标签上也绑定事件
+
+    // 得到当前选中的 a  得到 name time
+    renderArrangeList(movieId,$("a[class$='choosed']").attr("name"));
 }
 
+
+// 渲染排片列表
+function renderArrangeList(movieId,date) {
+
+    //渲染当天的时间排片列表
+    var str = new String();
+
+    var item = new Object();
+
+    for (var i = 0;i < movieArrange.length;++i){
+        if (movieArrange[i].movieId == movieId){
+            item = movieArrange[i];
+            break;
+        }
+    }
+
+    if (item == null){
+        return 1;
+    }
+
+    // 时间不可能传空的
+    var arrangeList = item.movieArrangeList;
+
+    console.log(arrangeList);
+
+    for (var j = 0; j < arrangeList.length;++j){
+
+        if (arrangeList[j].arrangeDate == date){
+
+            if (j % 2 == 0){
+                // 无背景色
+                str = str + " <div class=\"table-body-row table-body-row-no-back\">\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-time-col\">\n" +
+                    "\n" +
+                    "                                <p class=\"start\">"+ arrangeList[j].timeScopeStart +"</p>\n" +
+                    "                                <p class=\"end\">"+ arrangeList[j].timeScopeEnd +" 散场</p>\n" +
+                    "\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-language-col\">" + arrangeList[j].language +"</div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-screen-col\">" + arrangeList[j].screeningHallName + "</div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-price-col\">\n" +
+                    "                            <span>￥</span><span class=\"price-num\">"+ arrangeList[j].price +"</span>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-button-col\">\n" +
+                    "                            <button type=\"button\">选座购票</button>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                    </div>\n";
+            }else{
+
+                // 背景色
+                str = str + "<div class=\"table-body-row table-body-row-back\">\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-time-col\">\n" +
+                    "\n" +
+                    "                            <p class=\"start\">"+ arrangeList[j].timeScopeStart +"</p>\n" +
+                    "                            <p class=\"end\">"+ arrangeList[j].timeScopeEnd +" 散场</p>\n" +
+                    "\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-language-col\">" + arrangeList[j].language +"</div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-screen-col\">" + arrangeList[j].screeningHallName + "</div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-price-col\">\n" +
+                    "                            <span>￥</span><span class=\"price-num\">"+ arrangeList[j].price +"</span>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"body-col body-button-col\">\n" +
+                    "                            <button type=\"button\">选座购票</button>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                    </div>\n";
+            }
+        }
+    }
+
+    $(".table-body").empty();
+    $(".table-body").append(str);
+
+}
 
 // 轮播图渲染
 function swipperRender(){
@@ -151,6 +296,12 @@ function swipperRender(){
 
                 baseInfoPush(movieId);
 
+                var cinemaId = $(".cinema-id-hidden").attr("value");
+
+                // 但其实 初始化的时候已经 将当前影院的 排片记录 保存了 ，所有并不需要cinemaId
+
+                movieArrangeListPush(movieId);
+
             },
             click: function (obj) {
 
@@ -173,6 +324,10 @@ function swipperRender(){
                     var movieId = jqDom.attr("name");
 
                     baseInfoPush(movieId);
+
+                    // 点击的时候 刷新时间tag ul
+
+                    movieArrangeListPush(movieId);
                 }
 
             }

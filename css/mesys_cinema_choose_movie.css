@@ -213,20 +213,28 @@
 }
 
 .time-list-model ul a{
-    color: #FFFFFF;
     text-decoration: none;
 }
-.time-list-model ul li{
+.time-list-model ul .choosed{
     padding: 7px;
     margin: 10px;
     border-radius: 25px;
     color: #FFFFFF;
     background: #F03D37;
     display:inline;
+    cursor: default;
 }
 
 .time-list-model ul .no-choose{
-    color: #000;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 25px;
+    color: #000000;
+    display:inline;
+}
+
+.time-list-model ul .no-choose a{
+    color: #000000;
 }
 
 

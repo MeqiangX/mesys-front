@@ -11,3 +11,15 @@ function format(num) {
     if (num) { result = num + result; }
     return result;
 }
+
+
+// 日期转换函数
+
+function dateToStr(){
+
+}
+
+
+function strToDate(str,dateFormat) {
+    return new Date(str).format(dateFormat);
+}

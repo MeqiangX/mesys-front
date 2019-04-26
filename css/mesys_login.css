@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 670px;
+    background: #666666;
+}
+
+/* logo */
+.header{
+    width: 100%;
+    height: 15%;
+    background: #666666;
+}
+
+
+.header .header-logo{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background: #666666;
+}
+
+.header-logo img{
+
+}
+
+/* content */
+.content{
+    width: 100%;
+    height: 90%;
+    background: #666666;
+}
+
+
+/* 图片 */
+.content .content-img{
+    position: relative;
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    left: 15%;
+    background: firebrick;
+}
+
+.content .content-img img{
+    height: 100%;
+    width: 100%;
+}
+
+/* 表单*/
+.content .content-form{
+    position: absolute;
+    width: 35%;
+    height: 55%;
+    left: 50%;
+    top: 21%;
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+
+.content-form .head-label{
+    width: 100%;
+    height: 10%;
+}
+
+
+.head-label .label-text{
+    position: absolute;
+    top: 10px;
+    line-height: 20px;
+    color: gainsboro;
+}
+
+.head-label .login-option{
+    position: absolute;
+    left: 320px;
+    top: 10px;
+    color: #EC454A;
+    text-decoration: none;
+}
+
+
+.content-form .login-model{
+    width: 100%;
+    height: 58%;
+}
+
+/* 手机输入 失去焦点 */
+.login-model .input-phone {
+    position: relative;
+    top: 20px;
+    width: 60%;
+    left: 15%;
+    height: 30px;
+    font-size: 17px;
+    padding-left: 5px;
+    border: 1px solid #999999;
+    outline: none;
+}
+
+/* 手机输入 获得焦点 */
+.login-model .input-phone-blur{
+    position: relative;
+    top: 20px;
+    width: 60%;
+    left: 15%;
+    height: 30px;
+    font-size: 17px;
+    padding-left: 5px;
+    border: 1px solid #2BB8AA;
+    outline: none;
+}
+
+.phone-check{
+    position: relative;
+    left: 80px;
+    width: 60%;
+    top: 10px;
+    height: 30px;
+    background: #FFF6DB;
+    border: 1px solid  #F5D8A7;
+    border-radius: 5px;
+
+}
+
+.phone-check img{
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    left: 15px;
+}
+
+.phone-check p {
+    position: relative;
+    left: 38px;
+    line-height: 30px;
+}
+
+/* 密码输入 失去焦点 */
+.login-model .input-password{
+    position: relative;
+    top: 50px;
+    width: 60%;
+    height: 30px;
+    left: 15%;
+    font-size: 17px;
+    padding-left: 5px;
+    border: 1px solid #999999;
+    outline: none;
+}
+
+/* 密码输入 获得焦点 */
+.login-model .input-password-blur{
+    position: relative;
+    top: 50px;
+    width: 60%;
+    height: 30px;
+    left: 15%;
+    font-size: 17px;
+    padding-left: 5px;
+    border: 1px solid #E02025;
+    outline: none;
+}
+
+/* 验证码 失去焦点 */
+.login-model  .input-code{
+    position: relative;
+    top: 50px;
+    width: 60%;
+    height: 30px;
+    left: 15%;
+    font-size: 17px;
+    padding-left: 5px;
+    border: 1px solid #999999;
+    outline: none;
+}
+
+
+/* 验证码 得到焦点 */
+.login-model  .input-code-blur{
+    position: relative;
+    top: 50px;
+    width: 60%;
+    height: 30px;
+    left: 15%;
+    font-size: 17px;
+    padding-left: 5px;
+    border: 1px solid #E02025;
+    outline: none;
+}
+
+.login-model .forget-pwd{
+    position: relative;
+    top: 85px;
+    color: #EC454A;
+    text-decoration: none;
+}
+
+/*手机登录的忘记密码*/
+.login-model .dynamic-forget-pwd{
+    right: 100px;
+}
+
+.login-model .code-get{
+    position: relative;
+    right: 250px;
+    top: 85px;
+    text-decoration: none;
+    color: gainsboro;
+}
+
+.login-model .login-button{
+    position: relative;
+    top: 90px;
+    left: 15%;
+    width: 62%;
+    height: 30px;
+    font-size: 18px;
+    letter-spacing: 5px;
+    background: #E32921;
+    color: #FFFFFF;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.login-model .no-account-label{
+    position: relative;
+    top: 100px;
+    left: 80px;
+}
+
+.login-model .register{
+    position: relative;
+    left: 170px;
+    top: 78px;
+    color: #EC454A;
+    text-decoration: none;
+}
+
+
+/* footer */
+.footer{
+    width: 100%;
+    background: hotpink;
+}

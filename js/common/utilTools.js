@@ -13,6 +13,14 @@ function format(num) {
 }
 
 
+// 手机号格式校验
+function phoneRegCheck(phone) {
+    if(!(/^1[34578]\d{9}$/.test(phone))){
+        return false;
+    }
+    return true;
+}
+
 // 日期转换函数
 
 function dateToStr(){

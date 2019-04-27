@@ -1,0 +1,61 @@
+
+/* 主题框 */
+.content-model{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 3%;
+    border: 1px solid gainsboro;
+}
+
+
+/* 左导航 */
+.content-inner-left-navi{
+    position: absolute;
+    background: #F4F3F4;
+    height: 100%;
+    width: 25%;
+}
+
+/* label */
+.content-inner-left-navi .info-label{
+    height: 140px;
+    line-height: 140px;
+    font-size: 30px;
+}
+
+.content-inner-left-navi ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-inner-left-navi ul li a{
+    display:block;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 23px;
+    color: black;
+}
+
+.content-inner-left-navi ul li .nav-info:hover,.content-inner-left-navi ul li .nav-order:hover{
+    color: gray;
+}
+
+
+.content-inner-left-navi ul li .active{
+    background-color: #ED3931;
+    color: #FFFFFF;
+}
+
+
+/* 右边内容 */
+.content-inner-right-body{
+    position: absolute;
+    left: 25%;
+    height: 100%;
+    width: 75%;
+    background: gold;
+}

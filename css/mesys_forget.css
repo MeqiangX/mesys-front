@@ -12,8 +12,13 @@ body{
 
 .header {
     width: 100%;
-    height: 10%;
-    background: yellowgreen;
+    height: 12%;
+    border-bottom: 1px solid gainsboro;
+}
+
+.header img{
+    position: relative;
+    left: 10%;
 }
 
 .timeSteps {

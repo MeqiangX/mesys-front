@@ -197,11 +197,10 @@ function login(loginOption) {
         success:function (data,status) {
 
             if (true == data.success){
-                // 登录成功
-                alert("登录成功");
-                return true;
+                // 登录成功 跳转到Index  在跳转之前  将用户信息放在common 中
+                window.location.href='index.html';
             }else{
-                alert(data.message)
+                alert(data.message);
                 return false;
             }
         }
@@ -211,25 +210,7 @@ function login(loginOption) {
 
 }
 
-// 发送手机验证码
-function sendCode() {
 
-    $.ajax({
-        type: "post",
-        async:false,
-        url:"http://127.0.0.1:8084/api/uc/user/sendMessage",
-        data:{
-            receverPhone: $(".input-phone").val(),
-            sendType: 1
-        },
-        success: function (data,status) {
-            if (data.success == true){
-                alert("发送成功，请及时查看手机，验证码三分钟有效");
-            }
-        }
-    });
-
-}
 
 
 /* 点击发送验证码之后的计时  */
@@ -241,7 +222,7 @@ function codeCount() {
     }
 
     // 发送验证码
-    sendCode();
+    sendCode($(".input-phone").val(),1);
 
     // 设置为不可点击
     $(".code-get").css("cursor","default"); // 鼠标为default

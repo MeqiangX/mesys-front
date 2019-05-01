@@ -3,13 +3,8 @@
 // 千分位工具函数
 
 function format(num) {
-    var num = (num || 0).toString(), result = '';
-    while (num.length > 3) {
-        result = ',' + num.slice(-3) + result;
-        num = num.slice(0, num.length - 3);
-    }
-    if (num) { result = num + result; }
-    return result;
+    var c = (num.toString().indexOf ('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+    return c;
 }
 
 
@@ -74,6 +69,12 @@ function dateToStr(){
 }
 
 
-function strToDate(str,dateFormat) {
-    return new Date(str).format(dateFormat);
+// 获得 xxxx-xx-xx 的日期格式str
+function dateFormat(date) {
+    var y = date.getFullYear();
+    var m = date.getMonth() + 1;
+    m = m < 10 ? '0' + m : m;
+    var d = date.getDate();
+    d = d < 10 ? ('0' + d) : d;
+    return y + '-' + m + '-' + d;
 }

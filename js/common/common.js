@@ -37,7 +37,7 @@ function getAllParamsFromURI(){
 /*得到uri 中的 areaId*/
 function getParamFromURI(paramname){
     var params = getAllParamsFromURI();
-
+    
     if (params.length == 0){
         // 没有参数
         return null;
@@ -132,6 +132,9 @@ function initNavi(pageTypeCode){
             $("#footer").html(data);
         }
     });
+
+
+
 
   /*  $(document).ready(function() {
         $('.singleSelect').select2();

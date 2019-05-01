@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付 - 明凯电影</title>
+
+    <!--jquery 和 下拉控件-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+    <script src="../js/common/common.js"></script>
+
+    <script src="../js/common/utilTools.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+
+    <!-- 引用网络图片而导致 无法加载的解决方案 -->
+    <meta name="referrer" content="no-referrer">
+
+    <!-- setp -->
+
+    <link rel="stylesheet" type="text/css" href="../css/steps.css"/>
+
+    <script type="text/javascript" src="../js/steps.js"></script>
+
+    <!-- 自己的 -->
+    <link href="../css/pay_page.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/pay_page.js"></script>
+
+
+
+</head>
+<body>
+
+<header id="header" class="header">
+
+</header>
+
+
+<div id="body">
+
+    <!-- 步骤条 -->
+    <div class="stepTool">
+        <div class="stepToolInner">
+            <div id="steps1"></div>
+        </div>
+    </div>
+
+
+    <!-- 支付倒计时 -->
+    <div class="pay-countdown">
+        <p class="countdown-text">请在<span class="minu">9</span>分钟<span class="second">40</span>秒内完成支付</p>
+        <p class="worn-text">超时订单将会自动取消，请及时完成支付</p>
+    </div>
+
+    <!-- 提示信息 -->
+    <div class="check-info">
+
+        <img src="../image/icon/info.svg">
+        <p>请仔细核对场次信息，出票后将无法退票</p>
+
+    </div>
+
+    <!-- 订单信息 -->
+    <div class="order-info-table">
+
+        <table border="0px">
+            <thead>
+            <tr class="head">
+                <td>
+                    影片
+                </td>
+                <td>
+                    时间
+                </td>
+                <td>
+                    影院
+                </td>
+                <td>
+                    座位
+                </td>
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                         <p class="movie-name"></p>
+                    </td>
+                    <td>
+                        <p class="time"></p>
+                    </td>
+                    <td>
+                        <p class="cinema-name"></p>
+                    </td>
+                    <td>
+                        <div class="seat-screen">
+                            <p class="screen-name"></p>
+                            <div class="seat">
+
+                             <!--   <p class="seat-item1">7排5座</p>
+                                <p class="seat-item2">7排5座</p>
+                                <p class="seat-item3">7排5座</p>
+                                <p class="seat-item4">7排5座</p>
+                                <p class="seat-item5">7排5座</p>-->
+
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- 支付按钮 -->
+    <div class="pay-model">
+
+        <p class="pay-label">实际支付：<span class="price-symbol">￥</span><span class="total-price">80</span></p>
+        <button class="pay-button">确认支付</button>
+    </div>
+
+</div>
+
+<footer id="footer" class="footer">
+
+</footer>
+
+</body>
+<script>
+    initNavi();
+    init();
+</script>
+</html>

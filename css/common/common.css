@@ -208,4 +208,40 @@ html body {
     height: 50%;
     font-size: 22px;
 }
+.drop-menu {
+    position: relative; /* 使菜单跟hover对象保持相对位置 */
+    display: inline-block; /* 使菜单形成自然宽度而不会撑满屏幕 */
+    /* 其他的关于整体的样式控制 */
+}
+.hover-btn {
+    cursor: pointer; /* hover时鼠标的变化提示 */
+    /* 其他的关于hover对象的样式控制 */
+}
+.drop-content {
+    border: 1px solid gainsboro;
+    width: 100px;
+    display: none; /* 默认不显示菜单 */
+    position: absolute; /* 跟hover对象的relative对应 */
+    z-index: 1; /* 保证菜单在最上层，不被其他元素覆盖 */
+    /* 其他的关于下拉菜单的样式控制 */
+}
 
+.drop-content a{
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.drop-content a:hover{
+    background: gainsboro;
+}
+
+/* 以下开始利用hover选择器实现鼠标悬停时显示下拉菜单 */
+.drop-menu:hover .drop-content {
+    display: block; /* 悬停时变为显示 */
+}
+.drop-menu:hover .hover-btn {
+    /* 悬停时hover对象的样式控制 */
+}

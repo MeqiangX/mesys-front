@@ -40,8 +40,8 @@
             <p class="info-label">个人中心</p>
 
             <ul>
-                <li><a href="#news"class="nav-info active">基本信息</a></li>
-                <li><a href="#contact" class="nav-order">我的订单</a></li>
+                <li><a href="javascript:void(0)" class="nav-info active" onclick="navTransform(0,this)">基本信息</a></li>
+                <li><a href="javascript:void(0)" class="nav-order" onclick="navTransform(1,this)">我的订单</a></li>
             </ul>
 
         </div>
@@ -50,11 +50,57 @@
         <div class="content-inner-right-body">
 
             <div class="content-right-header">
-                <p class="navi-title">基本信息</p>
+                <p class="navi-title">我的订单</p>
             </div>
 
-            <div>
+            <div class="content-right-body">
 
+                <!-- 基本信息 -->
+              <!--  <div class="content-basic-info">
+
+                    &lt;!&ndash; 头像 &ndash;&gt;
+                    <div class="left-image">
+
+                    </div>
+
+                    &lt;!&ndash; 右边基本信息 &ndash;&gt;
+                    <div class="right-message">
+
+                        <p class="nico-name-label">昵称：</p>
+                        <input type="text" class="nico-name-input"/>
+
+                        <p class="sex-label">性别：</p>
+                        <div class="sex-radio">
+                            <input type="radio"  name="sex" value="0"/>男
+                            <input type="radio"  name="sex" value="1"/>女
+                        </div>
+
+                        <p class="borthday-label">生日：</p>
+                        <input type="date" class="date-tool">
+
+                        <p class="hobbies-label">兴趣爱好：</p>
+                        <input type="text" class="hobbies-input">
+
+                        <p class="signature-label">个性签名：</p>
+                        <input type="text" class="signature-input">
+                    </div>
+                </div>-->
+
+
+                <!-- order 订单 -->
+               <!-- <div class="content-order">
+
+                    <div class="order-list">
+
+                    </div>
+
+                    <div class="order-page-model">
+                        <div id="page-component" class="page-component">
+
+                        </div>
+                    </div>
+
+                </div>-->
             </div>
 
         </div>
@@ -70,5 +116,6 @@
 
 <script>
     initNavi();
+    init();
 </script>
 </html>

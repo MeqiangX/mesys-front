@@ -230,7 +230,7 @@ function renderArrangeList(movieId,date) {
                     "                        </div>\n" +
                     "\n" +
                     "                        <div class=\"body-col body-button-col\">\n" +
-                    "                            <button type=\"button\">选座购票</button>\n" +
+                    "                            <button type=\"button\" onclick=\"dumpToPurchase('"+ arrangeList[j].id +"')\">选座购票</button>\n" +
                     "                        </div>\n" +
                     "\n" +
                     "                    </div>\n";
@@ -255,7 +255,7 @@ function renderArrangeList(movieId,date) {
                     "                        </div>\n" +
                     "\n" +
                     "                        <div class=\"body-col body-button-col\">\n" +
-                    "                            <button type=\"button\">选座购票</button>\n" +
+                    "                            <button type=\"button\" onclick=\"dumpToPurchase('"+ arrangeList[j].id +"')\">选座购票</button>\n" +
                     "                        </div>\n" +
                     "\n" +
                     "                    </div>\n";
@@ -335,5 +335,13 @@ function swipperRender(){
 
 
     });
+}
+
+
+//  选座购票 按钮 跳转到选座页面 带上排片id
+function dumpToPurchase(id) {
+
+    window.location.href = "mesys_choose_seat.html?arrangeId=" + id;
+
 }
 

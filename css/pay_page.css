@@ -1,0 +1,215 @@
+/* 支付页面 */
+
+.stepTool{
+    position: relative;
+    width: 90%;
+    height: 8%;
+    left: 5%;
+}
+
+.stepTool .stepToolInner{
+    height: 100%;
+}
+
+.stepToolInner #steps1{
+    position: relative;
+    right: 170px;
+    top: 50px;
+}
+
+
+
+
+/* 倒计时 */
+.pay-countdown{
+    position: relative;
+    width:90%;
+    height: 6%;
+    background: #FFF3F3;
+    left: 5%;
+}
+
+.pay-countdown .countdown-text{
+    position: relative;
+    width: 30%;
+    height: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    left: 100px;
+    letter-spacing: 7px;
+}
+
+.pay-countdown .countdown-text .minu,.pay-countdown .countdown-text .second{
+    font-size: 30px;
+    color: #F03D43;
+}
+
+.pay-countdown .worn-text{
+    position: relative;
+    width: 30%;
+    height: 50%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    left: 100px;
+    color: #F03D43;
+}
+
+
+/* 提示信息 */
+.check-info{
+    width: 90%;
+    position: relative;
+    left: 5%;
+    top: 50px;
+    text-align: left;
+}
+
+.check-info img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 14px;
+}
+
+.check-info p{
+    position: relative;
+    left: 23px;
+    bottom: 11px;
+    color: #999999;
+}
+
+/* 订单信息 */
+.order-info-table {
+    position: relative;
+    width: 90%;
+    height: 6%;
+    left: 5%;
+    top: 50px;
+    border: 1px solid lightgrey;
+}
+
+.order-info-table table{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+
+.order-info-table .head{
+    height: 60px;
+    background: #F7F7F7;
+}
+
+
+/* 支付 */
+.pay-model {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    height: 150px;
+    top: 150px;
+}
+
+.pay-model .pay-label{
+    position: relative;
+    left: 580px;
+    top: 50px;
+    font-size: 18px;
+}
+
+.pay-model .pay-label .price-symbol{
+    color: #F03D43;
+    font-size: 25px;
+}
+
+.pay-model .pay-label .total-price{
+    color: #F03D43;
+    font-size: 35px;
+}
+
+
+.pay-model .pay-button{
+    position: relative;
+    left: 550px;
+    top: 60px;
+    width: 220px;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    color: #FFFFFF;
+    background: #F03D43;
+    cursor: pointer;
+}
+
+.seat-screen{
+    width: 100%;
+    height: 100%;
+}
+
+/* 放映厅 */
+.seat-screen .screen-name{
+    position: relative;
+    width: 50%;
+    height: 86%;
+    text-align: center;
+    line-height: 70px;
+    word-wrap: break-word;
+}
+
+/* 座位 */
+.seat-screen .seat{
+    position: relative;
+    left: 50%;
+    bottom: 86%;
+    width: 50%;
+    height: 86%;
+}
+
+.seat-screen .seat .seat-item1{
+    position: absolute;
+    width: 70px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border: 1px solid darkgray;
+}
+
+.seat-screen .seat .seat-item2{
+    position: absolute;
+    width: 70px;
+    height: 42px;
+    left: 70px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.seat-screen .seat .seat-item3{
+    position: absolute;
+    width: 70px;
+    height: 42px;
+    left: 140px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.seat-screen .seat .seat-item4{
+    position: absolute;
+    width: 70px;
+    height: 42px;
+    top: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.seat-screen .seat .seat-item5{
+    position: absolute;
+    width: 70px;
+    height: 42px;
+    left: 70px;
+    top: 42px;
+    text-align: center;
+    line-height: 42px;
+}

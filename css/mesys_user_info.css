@@ -57,5 +57,299 @@
     left: 25%;
     height: 100%;
     width: 75%;
-    background: gold;
+}
+
+
+.content-right-header{
+    position: relative;
+    width: 90%;
+    height: 5%;
+    left: 10%;
+    text-align: left;
+    line-height: 100px;
+    font-size: 22px;
+    border-bottom: 1px solid gainsboro;
+    color: #EF4C3F;
+}
+
+.content-right-body{
+    position: relative;
+    width: 90%;
+    height: 70%;
+    left: 10%;
+}
+
+.content-right-body .right-message{
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 70%;
+
+}
+
+.right-message .nico-name-label{
+    position: relative;
+    right: 150px;
+    top: 22px;
+    font-size: 20px;
+}
+
+.right-message .nico-name-input{
+    position: relative;
+    width: 180px;
+    bottom: 5px;
+    height: 25px;
+    right: 20px;
+    outline: none;
+}
+
+.right-message .sex-label{
+    position: relative;
+    right: 150px;
+    top: 22px;
+    font-size: 20px;
+}
+
+.right-message .sex-radio{
+    position: relative;
+    right: 80px;
+}
+
+.right-message .borthday-label{
+    position: relative;
+    right: 150px;
+    top: 22px;
+    font-size: 20px;
+}
+
+.right-message .date-tool{
+    position: relative;
+    width: 180px;
+    bottom: 5px;
+    height: 25px;
+    right: 20px;
+    outline: none;
+}
+
+.right-message .hobbies-label{
+    position: relative;
+    right: 170px;
+    top: 22px;
+    font-size: 20px;
+}
+
+.right-message .hobbies-input{
+    position: relative;
+    width: 180px;
+    bottom: 5px;
+    height: 25px;
+    right: 20px;
+    outline: none;
+}
+
+.right-message .signature-label{
+    position: relative;
+    right: 170px;
+    top: 22px;
+    font-size: 20px;
+}
+
+.right-message .signature-input{
+    position: relative;
+    width: 180px;
+    bottom: 5px;
+    height: 25px;
+    right: 20px;
+    outline: none;
+}
+
+
+
+/* 订单 */
+.content-order{
+    width: 100%;
+    height: 100%;
+}
+
+/* 订单列表 */
+.content-order .order-list{
+    width: 100%;
+    height: 90%;
+}
+
+/*订单项*/
+.content-order .order-list .order-item{
+    position: relative;
+    margin-top: 20px;
+    width: 95%;
+    height: 15%;
+    border: 1px solid gainsboro;
+
+}
+
+.content-order .order-list .order-item .top-info{
+    width: 100%;
+    height: 30%;
+    background: #F7F7F7;
+}
+
+.top-info .order-date{
+    position: relative;
+    right: 320px;
+    top: 20px;
+    font-size: 16px;
+}
+
+.top-info .order-id-label{
+    position: relative;
+    right: 150px;
+    bottom: 1px;
+    font-size: 16px;
+    color: #999999;
+}
+
+.top-info .del-order{
+    position: relative;
+    left: 320px;
+    bottom: 22px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.content-order .order-list .order-item .bottom-info{
+    width: 100%;
+    height: 70%;
+}
+
+.bottom-info .movie-img{
+    position: relative;
+    top: 8px;
+    right: 320px;
+    width: 80px;
+    height: 110px;
+    border: 2px solid #FFFFFF;
+}
+
+.bottom-info .movie-name{
+    position: relative;
+    bottom: 100px;
+    right: 230px;
+    font-size: 20px;
+}
+
+.bottom-info .cinema-name{
+    position: relative;
+    bottom: 100px;
+    right: 208px;
+    color:  #999999;
+}
+
+.bottom-info .screen-p{
+    position: relative;
+    bottom: 100px;
+    right: 175px;
+    color:  #999999;
+}
+
+.bottom-info .time-start{
+    position: relative;
+    bottom: 95px;
+    right: 203px;
+    color: #F03D37;
+}
+
+.bottom-info .price-label{
+    position: relative;
+    bottom: 150px;
+    left: 80px;
+}
+
+.bottom-info .order-status{
+    position: relative;
+    bottom: 171px;
+    left: 180px;
+}
+
+.bottom-info .pay{
+    position: relative;
+    bottom: 220px;
+    left: 350px;
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    outline: none;
+    background: #F03D37;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.bottom-info .order-detail{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    left: 260px;
+    bottom: 180px;
+}
+
+/*分页组件*/
+.order-page-model{
+    width: 100%;
+    height: 10%;
+}
+.order-page-model #page-component{
+    position: relative;
+    display: flex;
+    justify-content:center;/*内容水平居中*/
+    align-items:center; /*内容垂直居中*/
+    left: 5%;
+    width: 90%;
+    height: 100%;
+
+}
+
+
+
+.order-page-model #page-component .pre-page input{
+    width: 80px;
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+
+.order-page-model #page-component .page-num input{
+    width: 45px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+
+.order-page-model #page-component .next-page input{
+    width: 80px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 宋体;
+    border: 1px solid #99a9bf;
+    background: #FFFFFF;
+}
+
+/*hover*/
+.order-page-model #page-component .next-page input:hover,.order-page-model #page-component .page-num input:hover,.order-page-model #page-component .pre-page input:hover{
+    border-color: #EF4238;
 }

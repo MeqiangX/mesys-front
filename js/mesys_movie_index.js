@@ -349,3 +349,9 @@ function swipperRender(){
     });
 }
 
+// 给电影类别跳转 加参数
+function movieSearchAnchor(pageName,obj) {
+    var thisObj = $(obj);
+    thisObj.attr("href",pageName+"?areaId=" + getSelectedAreaId() + "&type=" + thisObj.attr("id"));
+}
+

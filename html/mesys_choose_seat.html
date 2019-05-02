@@ -9,6 +9,9 @@
     <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 
+    <!-- cookies,js -->
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    
     <script src="../js/common/common.js"></script>
 
     <script src="../js/common/utilTools.js"></script>
@@ -88,8 +91,8 @@
                 <p>票数：<span id="tickects_num">0</span></p>
                 <p>总价：</p>-->
                 <div class="purchase-model">
-                    <p class="phone-info">手机号：</p>
-                    <input type="button" class="btn choose-btm" value="确定购买">
+                    <p class="phone-info">手机号：<span class="phone"></span></p>
+                    <input type="button" class="btn choose-btm" value="确定购买" onclick="addOrder()">
                 </div>
 
                 <div id="legend"></div>

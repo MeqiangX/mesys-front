@@ -1,6 +1,8 @@
 
 // 选座  初始化界面
 
+var sc; // seats 插件
+
 function init() {
     steps1 = steps({
         el: "#steps1",
@@ -132,7 +134,7 @@ function initSeatData(seatList) {
         $tickects_num = $('#tickects_num'), //票数
         $total_price = $('#total_price'); //票价总额
 
-    var sc = $('#seat_area').seatCharts({
+    sc = $('#seat_area').seatCharts({
         /*map: [//座位结构图 a 代表座位; 下划线 "_" 代表过道
             'cccccccccc',
             'cccccccccc',
@@ -160,6 +162,7 @@ function initSeatData(seatList) {
             ]
         },
         click: function() {
+
             // 点击要做限制 如果没有选中 则要显示提示信息
 
             // 如果超过5个 则给出警告
@@ -208,6 +211,8 @@ function initSeatData(seatList) {
    /* sc.get(['1_3', '1_4', '4_4', '4_5', '4_6', '4_7', '4_8']).status('unavailable');*/
     sc.get(saledArray).status('unavailable');
 
+
+
 }
 
 
@@ -218,4 +223,88 @@ function getTotalPrice(sc,price) { //计算票价总额
         total += price;
     });
     return total;
+}
+
+
+/* 提交订单 */
+function addOrder() {
+
+
+    var arrangeId = getParamFromURI("arrangeId");
+    // 拿到userId
+    var userId = getUserIdFromCookies();
+
+    // 首先要查找当前要购买的数量 是否大于可买数量(5) 查找用户订单(当前arrangeId的)，包括支付和未支付的，看他们的 seatIds 的arrangeId
+
+    // 如果超过 则弹框
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8082/api/portal/order/bought-counts-arrangeId",
+        data:{
+            userId:userId,
+            arrangeId:arrangeId
+        },
+        success:function (data,status) {
+
+        }
+    });
+
+    // 正常
+
+
+    //得到选中的座位号
+
+    // class = selected 的 元素  得到id  row_col
+    var choosedList = $(".selected");
+
+    // 遍历 取得 id 用_分割 row col
+    var seatObjList = new Array();
+    for (var i = 0; i < choosedList.length;++i){
+
+        var rowAndCol = choosedList[i].id.split("_");
+
+        var seat = new Object();
+
+        seat.row = rowAndCol[0];//row
+        seat.col = rowAndCol[1];//col
+        seatObjList.push(seat);
+    }
+
+    //得到uri 中的 arrangeId  --> 根据arrangeId 找到对应的 screenseat 中的 座位号 对应的 座位ids
+
+    // 看是否已经被购买了  如果被购买了 弹框
+    $.ajax({
+        type:"post",
+        async:false,
+        url:"http://localhost:8082/api/portal/order/seatId-by-coordinate",
+        data:{
+            seats:seatObjList,
+            arrangeId:arrangeId
+        },
+        success:function (data,status) {
+
+        }
+    });
+
+
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8082/api/portal/order/allow-purchased",
+        data:{
+            seats:seatObjList // 上一步得到的坐席ids
+        },
+        success:function (data,status) {
+
+        }
+    });
+
+
+    //正常购买
+
+    //  传入坐席的idList 以及userId 即可 返回订单id  跳转至支付页面
+
+
+
 }

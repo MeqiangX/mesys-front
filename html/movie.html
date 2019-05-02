@@ -10,6 +10,9 @@
     <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 
+    <!-- cookies,js -->
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+
     <script src="../js/common/common.js"></script>
 
     <script src="../js/common/Tools.js"></script>
@@ -52,10 +55,10 @@
 
                         <ul>
                             <li><a href="javascript:void(0)" class="choosed-type" onclick="reflushMovieList(0,this)">全部</a></li>
-                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">爱情</a></li>
-                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">喜剧</a></li>
-                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">动画</a></li>
-                            <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">剧情</a></li>
+                            <li><a href="javascript:void(0)" id="love" onclick="reflushMovieList(0,this)">爱情</a></li>
+                            <li><a href="javascript:void(0)" id="fun" onclick="reflushMovieList(0,this)">喜剧</a></li>
+                            <li><a href="javascript:void(0)" id="katon" onclick="reflushMovieList(0,this)">动画</a></li>
+                            <li><a href="javascript:void(0)" id="plot" onclick="reflushMovieList(0,this)">剧情</a></li>
                             <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">恐怖</a></li>
                             <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">惊悚</a></li>
                             <li><a href="javascript:void(0)" onclick="reflushMovieList(0,this)">科幻</a></li>
@@ -249,7 +252,8 @@
 
 <script>
     initNavi("movie_li");
-    movieListResult(1,30);
+    initMovie();
+    /*movieListResult(1,30);*/
 </script>
 
 </html>

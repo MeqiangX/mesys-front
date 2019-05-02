@@ -1,5 +1,81 @@
 /*引入Header Footer部分公共代码*/
 
+/**
+ *  从cookies 中拿到 userId  从后端session 中 拿到登录用户 填充个人信息
+ */
+
+function getUserIdFromCookies() {
+    var userId = $.cookie("userId");
+    return userId;
+}
+
+
+//查看用户登录状态
+function usersStatus() {
+
+    var result;
+
+    var userId = getUserIdFromCookies();
+
+    console.log("当前userid -> " + userId);
+    if (userId == null){
+        result = null;
+    }else{
+
+        $.ajax({
+            type:"get",
+            async:false,
+            url:"http://127.0.0.1:8084/api/uc/user/getloginUser-fromSession",
+            xhrFields:{
+                withCredentials: true
+            },
+            crossDomain: true,
+            data:{
+                userId:userId
+            },
+            success:function (data,status) {
+                console
+                    .log(data);
+                if (data.success == true)
+                    result = data.data;
+            }
+        });
+
+    }
+
+    return result;
+}
+
+
+// 个人中悬停下拉框的初始化
+function initUserInfoCenter() {
+
+    strNoLogin = new String();
+
+    strLogin = new String();
+
+    strNoLogin = "<a href=\"login.html\">登录</a>";
+
+    strLogin = "<a href=\"mesys_user_info.html?option="+ 0 +"\">基本信息</a>\n" +
+        "                        <a href=\"mesys_user_info.html?option="+ 1 +"\">我的订单</a>\n" +
+        "                        <a href=\"javascript:void(0)\" onclick='logout()'>登出</a>\n";
+
+    $(".drop-content").empty();
+
+    // 去后端拿到登录状态  未登录 也设置为 登录
+
+    //  已经登录了 --> 设置成三项 基本信息 我的订单 登出
+    var user = usersStatus();
+
+
+
+    if (user == null){
+        $(".drop-content").append(strNoLogin);
+    }else{
+        $(".drop-content").append(strLogin);
+    }
+
+}
 
 /*得到当前选中的地域id*/
 function getSelectedAreaId() {
@@ -37,7 +113,7 @@ function getAllParamsFromURI(){
 /*得到uri 中的 areaId*/
 function getParamFromURI(paramname){
     var params = getAllParamsFromURI();
-    
+
     if (params.length == 0){
         // 没有参数
         return null;
@@ -46,7 +122,7 @@ function getParamFromURI(paramname){
         // 找到
         for (var i = 0; i < params.length;++i){
             if (paramname == params[i].paramName){
-                return params[i].paramVal;
+                return decodeURI(params[i].paramVal); // 中文乱码解决
             }
         }
         // 有参数 没找到
@@ -87,7 +163,7 @@ function initSelectOption() {
 
                 returnArray.push(item);
             }
-            /*console.log(returnArray);*/
+            /*console.log(returnArray);登录*/
             oneReq = returnArray;
         }
     });
@@ -134,7 +210,8 @@ function initNavi(pageTypeCode){
     });
 
 
-
+    // 个人中心的 初始化
+    initUserInfoCenter();
 
   /*  $(document).ready(function() {
         $('.singleSelect').select2();
@@ -147,4 +224,45 @@ function initNavi(pageTypeCode){
 function pageAnchor(pageName,obj) {
     var thisObj = $(obj);
     thisObj.attr("href",pageName+"?areaId=" + getSelectedAreaId());
+}
+
+// 登出
+function logout() {
+
+    // 拿到userId
+    var userId = getUserIdFromCookies();
+
+    // 从cookie 中清除
+    $.cookie("userId",null);
+    // 后端session 中清除
+
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8084/api/uc/user/logout",
+        xhrFields:{
+            withCredentials: true
+        },
+        crossDomain: true,
+        data:{
+            userId:userId
+        },
+        success:function (data,status) {
+            if (data.success == true){
+                // 登出成功
+                //window.location.reload(); // 相当于F5
+
+                //返回到首页
+
+                window.location.href="index.html";
+
+            }
+        }
+    });
+
+}
+
+
+function commonSearchButton() {
+    window.location.href = "movie_search.html?search="+$("#searchInput").val();
 }

@@ -3,6 +3,19 @@
 
 var PAGE_SIZE = 18; // 搜索页一页的页容：
 
+function initSearch() {
+
+
+    var searchVal = getParamFromURI("search");
+
+
+    if (searchVal == null){
+        search(1,PAGE_SIZE,'');
+    }else{
+        search(1,PAGE_SIZE,searchVal);
+    }
+
+}
 
 // 绑定搜索事件 
 function bindKeyPress() {

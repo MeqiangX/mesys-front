@@ -185,7 +185,7 @@ function login(loginOption) {
     var pwd = $(".input-password").val();
 
     $.ajax({
-        type: "post",
+        type: "get",
         async:false,
         url:"http://127.0.0.1:8084/api/uc/user/login",
         data:{
@@ -194,10 +194,21 @@ function login(loginOption) {
             password: pwd,
             code: code
         },
+        xhrFields:{
+            withCredentials:true
+        },
+        crossDomain:true,
         success:function (data,status) {
 
             if (true == data.success){
                 // 登录成功 跳转到Index  在跳转之前  将用户信息放在common 中
+
+                // 登录成功 将用户的id  放入cookies 中
+
+                //common 页面 通过拿到cookies 中的 userId  来去后台查询  登录状态
+                $.cookie('userId', data.data.id);
+
+
                 window.location.href='index.html';
             }else{
                 alert(data.message);
@@ -205,8 +216,6 @@ function login(loginOption) {
             }
         }
     });
-
-    return result;
 
 }
 

@@ -10,6 +10,37 @@ var WEEK_RANK = "5";  // 周榜
 
 var PAGE_SIZE = 7;
 /*当前榜单*/
+
+// 初始化榜单页面
+function initRank() {
+
+    //从路径上获取 rankType
+
+    var rankType = getParamFromURI("rankType");
+
+    // 没有就默认第一个 //这里一个问题 是 要模拟按键事件，但是如果是trigger 触发之后 它没有去执行href的跳转 所以看不见
+    if (null == rankType){
+        $("#week").trigger("click");
+    }else{
+        if (rankType == HOT_RANK){
+            $("#hot").trigger("click");
+        }else if (rankType == COMING_RANK){
+            $("#comming").trigger("click");
+        }else if (rankType == NEW_RANK){
+            $("#new").trigger("click");
+        }else if (rankType == NORTH_RANK){
+            $("#north").trigger("click");
+        }else if (rankType == TOP_100_RANK){
+            $("#top").trigger("click");
+        }else{
+            $("#week").trigger("click");
+        }
+    }
+    // 触发
+
+}
+
+
 function currentNavi(rankType,obj){
     // 得到 之前被选中的 导航
     var thisObj = $(obj); // 包装成Jq 对象
@@ -29,7 +60,9 @@ function currentNavi(rankType,obj){
 
     // 所以点击了 导航栏的话 要去重新加载 数据
 
-    rankList(rankType,1,PAGE_SIZE);
+    return rankList(rankType,1,PAGE_SIZE);
+
+    // 渲染完成后 跳转
 
 
 }
@@ -51,7 +84,7 @@ function rankList(rankType,current,pageSize){
         },
         success: function (data,status) {
             console.log(data);
-            if (rankType == WEEK_RANK  ){
+            if (rankType == WEEK_RANK){
                 weekRank(data.data.current,data.data.records);
             }
 
@@ -77,7 +110,9 @@ function rankList(rankType,current,pageSize){
 
             pageComponent(rankType,current,pageSize,data.data.pages);
         }
-    })
+    });
+
+    return true;
 
 }
 
@@ -224,6 +259,7 @@ function newRank(currentPage,itemList){
 
 /*热映榜*/
 function hotRank(currentPage,itemList){
+
 
     var str = new String()
 

@@ -9,6 +9,20 @@ var current = 1;
 
 //  电影页 的 Js
 
+// 初始化电影页
+function initMovie() {
+
+    var type = getParamFromURI("type");
+
+    if (type == null){
+        movieListResult(1,30);
+    }else{
+        reflushMovieList(0,$("#"+type));
+    }
+
+}
+
+
 // 局部刷新 根据筛选项
 function reflushMovieList(searchType,obj){
 

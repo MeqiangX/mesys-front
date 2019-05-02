@@ -47,7 +47,7 @@ function pushCinemaList(itemList) {
             "\n" +
             "                <div class=\"order-seat-model\">\n" +
             "\n" +
-            "                   <a class=\"order-button\" href=\"javascript:void(0)\">选座购票</a>\n" +
+            "                   <a class=\"order-button\" href=\"cinema_choose_movie.html?cinemaId= "+ itemList[i].id + " &areaId=" + getSelectedAreaId() + "\">选座购票</a>\n" +
             "\n" +
             "                </div>\n" +
             "\n" +

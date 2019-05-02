@@ -4,7 +4,21 @@ var pageSize = 6;
 
 function init() {
 
-    $(".nav-info").trigger("click");
+    // 页面跳转会可能会携带参数  如果没有携带 则自动触发 个人信息
+
+    // option = 0 默认 为个人信息
+
+    // option = 1 为我的订单
+
+    var option = getParamFromURI("option");
+
+    if (null == option || option == 0){
+        $(".nav-info").trigger("click");
+    }else{
+        $(".nav-order").trigger("click");
+    }
+
+
     //orders(3,1,10);
 }
 
@@ -64,7 +78,7 @@ function putOrderList(orderList) {
             "                                <p class=\"order-status\">" + status + "</p>\n" +
             "\n" +
             "                                <button type=\"button\" class=\"pay\">付款</button>\n" +
-            "                                <a href=\"javascript:void(0)\" class=\"order-detail\">查看详情</a>\n" +
+            "                                <a href=\"order_detail.html?orderId="+ orderList[i].orderId +"\" class=\"order-detail\">查看详情</a>\n" +
             "                            </div>\n" +
             "\n" +
             "                        </div>\n";

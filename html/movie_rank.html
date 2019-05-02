@@ -10,6 +10,9 @@
     <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 
 
+    <!-- cookies,js -->
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
     <script src="../js/common/common.js"></script>
 
@@ -39,12 +42,12 @@
         <!-- 标签页区域 -->
         <div id="box">
             <ul id="tab_nav">
-                <li><a href="#t_1" class="choosed-rank" onclick="currentNavi(5,this)">本周口碑榜</a></li>
-                <li><a href="#t_2" onclick="currentNavi(3,this)">北美票房榜</a></li>
-                <li><a href="#t_3" onclick="currentNavi(2,this)">新片榜</a></li>
-                <li><a href="#t_4" onclick="currentNavi(0,this)">热映榜</a></li>
-                <li><a href="#t_5" onclick="currentNavi(1,this)">即将上映榜</a></li>
-                <li><a href="#t_6" onclick="currentNavi(4,this)">TOP100</a></li>
+                <li><a href="#t_1" id="week" class="choosed-rank" onclick="currentNavi(5,this)">本周口碑榜</a></li>
+                <li><a href="#t_2" id="north" onclick="currentNavi(3,this)">北美票房榜</a></li>
+                <li><a href="#t_3" id="new" onclick="currentNavi(2,this)">新片榜</a></li>
+                <li><a href="#t_4" id="hot" onclick="currentNavi(0,this)">热映榜</a></li>
+                <li><a href="#t_5" id="comming" onclick="currentNavi(1,this)">即将上映榜</a></li>
+                <li><a href="#t_6" id="top" onclick="currentNavi(4,this)">TOP100</a></li>
             </ul>
         </div>
     </div>
@@ -293,7 +296,7 @@
 
 <script>
     initNavi("rank_li");
-    rankList(WEEK_RANK,1,PAGE_SIZE);
+    initRank();
 </script>
 
 </html>

@@ -3,6 +3,7 @@
 1. 前后端分离 得到后端的session时候的问题 
 
 > 参考： https://blog.csdn.net/qq_29072049/article/details/83574221
+https://segmentfault.com/a/1190000011811757
 
 > 普通发送ajax请求
 

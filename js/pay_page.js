@@ -29,6 +29,8 @@ function init() {
     var second = initCountDown();
     countdown(second);
 
+
+
 }
 
 // 初始化 订单信息
@@ -104,22 +106,21 @@ function countdown(second) {
         if (second >= 0){
             putCountDown(second);
             second--;
+        }else{
+            // 当前订单未在指定时间内完成 已经取消 请重新购买
+            alert("当前订单未在指定时间内完成 已经取消 请重新购买");
+            // 结束计时后 清除订单
+            if  (clearTimeoutOrder(orderId)){
+
+                alert("订单已取消，请重新购买");
+                // 跳转回上一页
+                window.history.back(-1);
+            }
+            clearInterval(flushTime); // 停止定时任务
+
         }
     },1000);
 
-    if (second < 0 ){
-       // 当前订单未在指定时间内完成 已经取消 请重新购买
-       alert("当前订单未在指定时间内完成 已经取消 请重新购买");
-       clearInterval(flushTime); // 停止定时任务
-
-        // 清除订单
-        if  (clearTimeoutOrder(orderId)){
-
-            alert("订单已取消，请重新购买");
-            // 跳转回上一页
-            window.history.back(-1);
-        }
-    }
 }
 
 // 填充时间
@@ -134,6 +135,8 @@ function putCountDown(second) {
 
 // 清除过期未支付订单
 function clearTimeoutOrder(orderId) {
+
+    alert("进入");
 
     var result = false;
     $.ajax({

@@ -169,6 +169,9 @@ function initSeatData(seatList) {
             var selectdLength = sc.find('selected').length;
 
                 if (this.status() == 'available') { //若为可选座状态，添加座位
+                    //同时 购买按钮不可选
+                    $(".btn").addClass("choose-btm");
+                    $(".btn").attr("disabled",false);
                     if (selectdLength <  5){
                         //如果当前选中的数 小于5 则 可以加
                         $(".check-info").text("");
@@ -196,6 +199,10 @@ function initSeatData(seatList) {
                     if (selectdLength == 1){
                         $(".check-info").text("一次最多选五个座位");
                         $(".prompt-info").text("请点击左侧座位图选择座位");
+
+                        //同时 购买按钮不可选
+                        $(".btn").removeClass("choose-btm");
+                        $(".btn").attr("disabled",true);
                     }
 
                     return 'available';
@@ -229,6 +236,7 @@ function getTotalPrice(sc,price) { //计算票价总额
 /* 提交订单 */
 function addOrder() {
 
+    var result;
 
     var arrangeId = getParamFromURI("arrangeId");
     // 拿到userId
@@ -237,18 +245,7 @@ function addOrder() {
     // 首先要查找当前要购买的数量 是否大于可买数量(5) 查找用户订单(当前arrangeId的)，包括支付和未支付的，看他们的 seatIds 的arrangeId
 
     // 如果超过 则弹框
-    $.ajax({
-        type:"get",
-        async:false,
-        url:"http://localhost:8082/api/portal/order/bought-counts-arrangeId",
-        data:{
-            userId:userId,
-            arrangeId:arrangeId
-        },
-        success:function (data,status) {
-
-        }
-    });
+    var purchasedNum = purchasedSeatNum(userId,arrangeId);
 
     // 正常
 
@@ -271,40 +268,135 @@ function addOrder() {
         seatObjList.push(seat);
     }
 
+    console.log(seatObjList);
+
+    if (purchasedNum + seatObjList.length > 5){
+        alert("同一场次下最多只能购买五张坐席");
+        result = -1;
+        return result;
+    }
+
     //得到uri 中的 arrangeId  --> 根据arrangeId 找到对应的 screenseat 中的 座位号 对应的 座位ids
 
     // 看是否已经被购买了  如果被购买了 弹框
+    var seatIds = seatToSeatId(seatObjList,arrangeId);
+
+
+
+    var purchasedList = isAllowPurchase(seatIds);
+
+    if (purchasedList == null){
+        alert("请求失败");
+        result = -2;
+        return result;
+    }
+    if (purchasedList.length != 0){
+
+        alert("存在被预定的坐席："+ purchasedList.split(","));
+        result = -3;
+        return result;
+    }
+
+    var orderId;
+
+    //正常购买
     $.ajax({
-        type:"post",
+        type:"get",
         async:false,
-        url:"http://localhost:8082/api/portal/order/seatId-by-coordinate",
+        url:"http://localhost:8082/api/portal/order/seat-book",
         data:{
-            seats:seatObjList,
-            arrangeId:arrangeId
+            seatIds:seatIds,
+            userId:userId
         },
         success:function (data,status) {
+            if (data.success == true){
+                orderId = data.data;
+                result = orderId;
+                alert("订购成功 订单号：" + orderId);
 
+                //刷新页面  --> 跳转到支付页面
+                window.location.reload();
+                window.location.href = "pay_page.html?orderId="+result;
+            }
         }
     });
 
+    //  传入坐席的idList 以及userId 即可 返回订单id  跳转至支付页面
+    return result;
+
+}
+
+
+// 查看当前用户在当前场次已购买的坐席数
+function purchasedSeatNum(userId,arrangeId) {
+
+    var result;
+
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8082/api/portal/order/bought-counts-arrangeId",
+        data:{
+            userId:userId,
+            arrangeId:arrangeId
+        },
+        success:function (data,status) {
+            if (data.success == true){
+                result = data.data;
+            }
+        }
+    });
+
+    return result;
+
+}
+
+// 得到坐席对应的ids
+function seatToSeatId(seatObjList,arrangeId) {
+
+    var result;
+
+    var coordinatePo = new Object();
+
+    coordinatePo.seats = seatObjList;
+    coordinatePo.arrangeId = arrangeId;
+    $.ajax({
+        type:"post",  // 用ajax + @requestBody 组合 用json 数据格式传送 要指定 数据格式 和传输格式
+        async:false,
+        dataType:"json",
+        contentType:"application/json",
+        url:"http://localhost:8082/api/portal/order/seatId-by-coordinate",
+        data: JSON.stringify(coordinatePo),
+        success:function (data,status) {
+            if (data.success = true){
+                result = data.data;
+            }
+        }
+    });
+
+    return result;
+}
+
+
+//当前要预定的坐席ids 是否可预订
+function isAllowPurchase(seatIds){
+
+    var result;
 
     $.ajax({
         type:"get",
         async:false,
         url:"http://localhost:8082/api/portal/order/allow-purchased",
         data:{
-            seats:seatObjList // 上一步得到的坐席ids
+            seats:seatIds // 上一步得到的坐席ids
         },
         success:function (data,status) {
-
+            // 返回的是被预定的坐席id 如果都没有 则正常都可预订
+            if (data.success == true){
+                result = data.data;
+            }
         }
     });
 
-
-    //正常购买
-
-    //  传入坐席的idList 以及userId 即可 返回订单id  跳转至支付页面
-
-
-
+    return result;
 }

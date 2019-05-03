@@ -10,6 +10,8 @@ function init() {
 
     var second = initCountDown();
     countdown(second);
+
+
 }
 
 
@@ -91,25 +93,50 @@ function putCountDown(second) {
 
 //页面 刷新 开始计时
 function countdown(second) {
+  // setInterval 是异步的
+
+
 
     var flushTime = setInterval(function () {
         if (second >= 0){
             putCountDown(second);
             second--;
+        }else{
+            // 当前订单未在指定时间内完成 已经取消 请重新购买
+            alert("当前订单未在指定时间内完成 已经取消 请重新购买");
+            // 返回后 清除订单
+            if  (clearTimeoutOrder(orderId)){
+
+                alert("订单已取消，请重新购买");
+                // 跳转回上一页
+                window.history.back(-1);
+                window.location.reload();
+            }
+            clearInterval(flushTime); // 停止定时任务
+
         }
     },1000);
 
-    if (second < 0 ){
-        // 当前订单未在指定时间内完成 已经取消 请重新购买
-        alert("当前订单未在指定时间内完成 已经取消 请重新购买");
-        clearInterval(flushTime); // 停止定时任务
+}
 
-        // 清除订单
-        if  (clearTimeoutOrder(orderId)){
+// 清除过期未支付订单
+function clearTimeoutOrder(orderId) {
 
-            alert("订单已取消，请重新购买");
-            // 跳转回上一页
-            window.history.back(-1);
+    alert("进入");
+
+    var result = false;
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8082/api/portal/order/timeout-order-check/"+orderId,
+        success:function (data,status) {
+
+            if (data.success == true){
+                result = data.data;
+            }
+
         }
-    }
+    });
+
+    return result;
 }

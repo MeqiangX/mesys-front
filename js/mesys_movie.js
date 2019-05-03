@@ -65,7 +65,7 @@ function radioFlushMovies() {
 // 填充页面的电影列表结果
 function movieListResult(current,size){
 
-    alert("current =  " + current + "size = " + size);
+    //alert("current =  " + current + "size = " + size);
     // 每次刷新的时候 都要清空 内容
     $("#movies-list-model").empty();
 

@@ -2,35 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e693caf-a334-4ed5-a3fd-2ef9e9da0611" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/order_detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/order_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/order_detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/cinema.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/cinema.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/cinema_choose_movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/cinema_choose_movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/init_model.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/init_model.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/order_detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/order_detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/pay_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/pay_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/mesys_choose_seat.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/mesys_choose_seat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/mesys_user_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/mesys_user_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/movie_choose_cinema.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/movie_choose_cinema.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/movie_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/movie_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/movie_rank.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/movie_rank.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/movie_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/movie_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pay_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pay_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/common/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/mesys_choose_seat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_choose_seat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mesys_cinema.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_cinema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/mesys_movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mesys_movie_choose_cinema.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_movie_choose_cinema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mesys_movie_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_movie_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mesys_movie_rank.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_movie_rank.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mesys_movie_search.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_movie_search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mesys_user_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_user_info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/order_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/order_detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/pay_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pay_page.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -48,32 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mesys_choose_seat.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/mesys_choose_seat.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mesys_choose_seat.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/mesys_choose_seat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="307" selection-start-line="307" selection-end-line="307" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/common/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="232" column="40" lean-forward="true" selection-start-line="231" selection-start-column="3" selection-end-line="232" selection-end-column="40" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="110">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -92,7 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>code-get</find>
       <find>next-step</find>
       <find>Com</find>
       <find>Util</find>
@@ -122,6 +78,7 @@
       <find>page</find>
       <find>user</find>
       <find>登录</find>
+      <find>choose-btm</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -151,8 +108,6 @@
         <option value="$PROJECT_DIR$/css/mesys_forget.css" />
         <option value="$PROJECT_DIR$/css/reset.css" />
         <option value="$PROJECT_DIR$/js/mesys_cinema_choose_movie.js" />
-        <option value="$PROJECT_DIR$/css/choose_seat.css" />
-        <option value="$PROJECT_DIR$/css/pay_page.css" />
         <option value="$PROJECT_DIR$/css/mesys_user_info.css" />
         <option value="$PROJECT_DIR$/js/common/utilTools.js" />
         <option value="$PROJECT_DIR$/css/common/common.css" />
@@ -165,25 +120,27 @@
         <option value="$PROJECT_DIR$/html/movie_choose_cinema.html" />
         <option value="$PROJECT_DIR$/html/movie_detail.html" />
         <option value="$PROJECT_DIR$/html/pay_page.html" />
-        <option value="$PROJECT_DIR$/js/pay_page.js" />
         <option value="$PROJECT_DIR$/html/order_detail.html" />
-        <option value="$PROJECT_DIR$/js/order_detail.js" />
         <option value="$PROJECT_DIR$/js/mesys_user_info.js" />
-        <option value="$PROJECT_DIR$/css/order_detail.css" />
         <option value="$PROJECT_DIR$/html/movie_search.html" />
         <option value="$PROJECT_DIR$/html/common/header.html" />
         <option value="$PROJECT_DIR$/js/mesys_movie_search.js" />
         <option value="$PROJECT_DIR$/js/common/common.js" />
         <option value="$PROJECT_DIR$/html/movie_rank.html" />
         <option value="$PROJECT_DIR$/js/mesys_movie_rank.js" />
-        <option value="$PROJECT_DIR$/js/mesys_movie.js" />
         <option value="$PROJECT_DIR$/html/movie.html" />
         <option value="$PROJECT_DIR$/js/mesys_movie_index.js" />
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/js/mesys_cinema.js" />
         <option value="$PROJECT_DIR$/js/mesys_movie_choose_cinema.js" />
+        <option value="$PROJECT_DIR$/css/choose_seat.css" />
         <option value="$PROJECT_DIR$/html/mesys_choose_seat.html" />
+        <option value="$PROJECT_DIR$/css/order_detail.css" />
+        <option value="$PROJECT_DIR$/css/pay_page.css" />
         <option value="$PROJECT_DIR$/js/mesys_choose_seat.js" />
+        <option value="$PROJECT_DIR$/js/order_detail.js" />
+        <option value="$PROJECT_DIR$/js/pay_page.js" />
+        <option value="$PROJECT_DIR$/js/mesys_movie.js" />
       </list>
     </option>
   </component>
@@ -196,11 +153,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-120" />
-    <option name="y" value="72" />
-    <option name="width" value="1035" />
-    <option name="height" value="628" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="68" />
+    <option name="y" value="59" />
+    <option name="width" value="1228" />
+    <option name="height" value="662" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -220,13 +177,7 @@
             <path>
               <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,25 +251,28 @@
       <workItem from="1556671635475" duration="17658000" />
       <workItem from="1556759277995" duration="16259000" />
       <workItem from="1556786038593" duration="17682000" />
+      <workItem from="1556808695953" duration="178000" />
+      <workItem from="1556846114535" duration="11211000" />
+      <workItem from="1556867077775" duration="597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="459400000" />
+    <option name="totallyTimeSpent" value="471386000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="81" y="65" width="1228" height="662" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7019231" visible="true" weight="0.2057101" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6939655" visible="true" weight="0.24339934" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.20717423" side_tool="true" visible="true" weight="0.17981073" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.20957096" side_tool="true" visible="true" weight="0.1594203" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.79282576" visible="true" weight="0.17981073" />
-      <window_info id="Favorites" order="2" sideWeight="0.29807693" side_tool="true" visible="true" weight="0.2057101" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.79042906" visible="true" weight="0.1594203" />
+      <window_info id="Favorites" order="2" sideWeight="0.30603448" side_tool="true" visible="true" weight="0.24339934" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -337,7 +291,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -393,13 +347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/choose_seat.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" lean-forward="true" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -497,39 +444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/pay_page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3300">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/pay_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding>
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pay_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mesys_user_info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="71" column="74" lean-forward="true" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,20 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/order_detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/order_detail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="94" column="23" lean-forward="true" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -565,11 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,11 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -603,11 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -615,28 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mesys_movie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,13 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="352" column="26" selection-start-line="352" selection-start-column="9" selection-end-line="352" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/movie.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="60" column="69" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -665,9 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,18 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="43" column="159" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="159" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="74" column="32" lean-forward="true" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -694,11 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="151" column="46" lean-forward="true" selection-start-line="151" selection-start-column="46" selection-end-line="151" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,27 +549,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/mesys_choose_seat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/common/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="232" column="40" lean-forward="true" selection-start-line="231" selection-start-column="3" selection-end-line="232" selection-end-column="40" />
+        <state relative-caret-position="336">
+          <caret line="232" column="40" selection-start-line="231" selection-start-column="3" selection-end-line="232" selection-end-column="40" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/choose_seat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="182" column="27" selection-start-line="182" selection-start-column="17" selection-end-line="182" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/mesys_choose_seat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="84" column="47" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/order_detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="171" column="31" lean-forward="true" selection-start-line="171" selection-start-column="31" selection-end-line="171" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/pay_page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="217" column="37" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/pay_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mesys_movie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/movie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="60" column="69" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pay_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="106" column="33" lean-forward="true" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/mesys_choose_seat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="307" selection-start-line="307" selection-end-line="307" />
+        <state relative-caret-position="396">
+          <caret line="320" column="9" lean-forward="true" selection-start-line="320" selection-start-column="9" selection-end-line="320" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/order_detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

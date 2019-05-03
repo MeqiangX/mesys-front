@@ -174,7 +174,7 @@
     height: 42px;
     text-align: center;
     line-height: 42px;
-    border: 1px solid darkgray;
+    border-left: 1px solid gainsboro;
 }
 
 .seat-screen .seat .seat-item2{
@@ -184,6 +184,7 @@
     left: 70px;
     text-align: center;
     line-height: 42px;
+    border-left: 1px solid gainsboro;
 }
 
 .seat-screen .seat .seat-item3{
@@ -193,6 +194,7 @@
     left: 140px;
     text-align: center;
     line-height: 42px;
+    border-left: 1px solid gainsboro;
 }
 
 .seat-screen .seat .seat-item4{
@@ -202,6 +204,7 @@
     top: 42px;
     text-align: center;
     line-height: 42px;
+    border-left: 1px solid gainsboro;
 }
 
 .seat-screen .seat .seat-item5{
@@ -212,4 +215,5 @@
     top: 42px;
     text-align: center;
     line-height: 42px;
+    border-left: 1px solid gainsboro;
 }

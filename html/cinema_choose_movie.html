@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>XX(影院名称) - 明凯电影</title>
+    <title class="title">XX(影院名称) - 明凯电影</title>
 
     <!--jquery 和 下拉控件-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
@@ -224,10 +224,8 @@
 </body>
 
 <script>
-
     initNavi();
-    initCinemaInfo(6);
-
+    initCinemaInfo(getParamFromURI("cinemaId"));
 </script>
 
 </html>

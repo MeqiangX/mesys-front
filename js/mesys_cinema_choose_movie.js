@@ -17,7 +17,7 @@ function initCinemaInfo(cinemaId){
     });
 
     // 填充影院
-    lodeMovieArranges(6);
+    lodeMovieArranges(cinemaId);
 
     // 填充轮播图
     swipperDataPush();
@@ -30,6 +30,7 @@ function initCinemaInfo(cinemaId){
 
 /* 填充影院信息 */
 function putCinemaInfo(item) {
+    document.title = (item.cinemaName) + " - 明凯影院";
     $("#image-src").attr("src",item.image); // 图片
     $(".cinema-id-hidden").attr("value",item.id);
     $(".cinema-name").append(item.cinemaName);

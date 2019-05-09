@@ -32,7 +32,7 @@ function hotRankData(){
             for (var i = 0;i < data.data.records.length;i++,starOrScoreNum++){
                 var item = data.data.records[i];
                 str = str + "<div class=\"swiper-slide\">\n" +
-                    "                    <a href=\""+ "movie_detail.html?movieId=" + item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                    "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                     "                    <img class=\"movieImage\" src= " + "\"" + item.image + "\">\n" +
                     "                    </a>\n" +
                     "                    <p class=\"movie-name\">"+ item.movieName + "</p>\n" +
@@ -41,13 +41,18 @@ function hotRankData(){
                     "                    </div>\n" +
                     "                    <span id=\"score"+ starOrScoreNum + "\" class=\"score\">"+ item.rating +"</span>\n" +
                     "                    </div>\n" +
-                    "                    <input type=\"button\" class=\"order\" value=\"购票\" name=\"购票\">\n" +
+                    "                    <a class='purchase-a' name=\"" + item.movieId + "\" style='text-decoration: none'><input type=\"button\" class=\"order\" value=\"购票\" name=\"购票\"></a>\n" +
                     "                    </div>\n";
             }
 
             $("#swiper-warpper").append(str);
             //渲染轮播图
             swipperRender();
+
+            // 渲染完成后 绑定事件
+            bindAction();
+            clickABind();
+
         }
     });
 }
@@ -76,7 +81,7 @@ function commingRankData(){
                 if (i == 0 || i == 4){
                     str = str + "<tr>\n" +
                         "                            <td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                    <img class=\"movieImage\" src=\"" + item.image + "\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -87,12 +92,12 @@ function commingRankData(){
                         "                                </div>\n" +
                         "                                <div class=\"comming-list-button-group\">\n" +
                         "                                    <input type=\"button\" value=\"预告片\" name=\"预告片\" class=\"comming-list-button-preView\"/>\n" +
-                        "                                    <input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\"/>\n" +
+                        "                                    <a class='purchase-a' name=\"" + item.movieId + "\" style='text-decoration: none'><input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\" /></a>\n" +
                         "                                </div>\n" +
                         "                            </td>\n";
                 }else if (i == 3 || i == 7){
                     str = str + "<td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+item.movieName+"</p>\n" +
@@ -103,13 +108,13 @@ function commingRankData(){
                         "                                </div>\n" +
                         "                                <div class=\"comming-list-button-group\">\n" +
                         "                                    <input type=\"button\" value=\"预告片\" name=\"预告片\" class=\"comming-list-button-preView\"/>\n" +
-                        "                                    <input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\"/>\n" +
+                        "                                    <a class='purchase-a' name=\"" + item.movieId + "\" style='text-decoration: none'><input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\"/></a>\n" +
                         "                                </div>\n" +
                         "                            </td>\n" +
                         "                        </tr>\n";
                 }else {
                     str = str + "<td>\n" +
-                        "                                <a href=\"" + "movie_detail.html?movieId="+ item.movieId  + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+item.movieName+ "</p>\n" +
@@ -120,13 +125,16 @@ function commingRankData(){
                         "                                </div>\n" +
                         "                                <div class=\"comming-list-button-group\">\n" +
                         "                                    <input type=\"button\" value=\"预告片\" name=\"预告片\" class=\"comming-list-button-preView\"/>\n" +
-                        "                                    <input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\"/>\n" +
+                        "                                    <a class='purchase-a' name=\"" + item.movieId + "\" style='text-decoration: none'><input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\" /></a>\n" +
                         "                                </div>\n" +
                         "                            </td>\n";
                 }
             }
             // append
             $("#comming-list").append(str);
+            clickABind();
+            purchaseA();
+
         }
     });
 };
@@ -152,7 +160,7 @@ function newRankData(){
                 if (i == 0){
                     str = str + " <tr>\n" +
                         "                            <td  class=\"hotRank-td-1\" colspan=\"2\">\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -161,7 +169,7 @@ function newRankData(){
 
                 }else if (i == 2 || i == 6){
                     str = str + "<td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -171,7 +179,7 @@ function newRankData(){
                 }else if (i == 3){
                     str = str + " <tr>\n" +
                         "                            <td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -179,7 +187,7 @@ function newRankData(){
                         "                            </td>\n";
                 }else{
                     str = str + " <td>\n" +
-                        "                                <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                    <img class=\"movieImage\" src=\""+ item.image +"\" />\n" +
                         "                                </a>\n" +
                         "                                <p class=\"movie-name\">"+ item.movieName +"</p>\n" +
@@ -189,6 +197,7 @@ function newRankData(){
             }
             // append
             $("#hotRank-list-table").append(str);
+            clickABind();
         }
     });
 }
@@ -215,7 +224,7 @@ function top100RankData(){
                 if (i == 0){
                     str = str + " <tr>\n" +
                         "                                    <td>\n" +
-                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0)'>\n" +
                         "                                            <div class=\"rank-item-1\" id=\"rank-item-1\">\n" +
                         "                                                <img src=\""+ item.image +"\">\n" +
                         "                                                <div id=\"rank-item-descrip-1\">\n" +
@@ -230,7 +239,7 @@ function top100RankData(){
                 }else if (i == 1 || i == 2){
                     str = str + "<tr>\n" +
                         "                                    <td>\n" +
-                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0)'>\n" +
                         "                                            <div class=\"rank-item-2\">\n" +
                         "                                                <div class=\"rank-item-descrip\">\n" +
                         "                                                    <p class=\"rank-no-pre3\">"+ (i+1) +"</p>\n" +
@@ -244,7 +253,7 @@ function top100RankData(){
                 }else {
                     str = str + "<tr>\n" +
                         "                                    <td>\n" +
-                        "                                        <a href=\""+ "movie_detail.html?movieId="+ item.movieId + "&areaId="+ getSelectedAreaId() + "\">\n" +
+                        "                                        <a class='detail' name=\"" + item.movieId + "\" href='javascriot:void(0s)'>\n" +
                         "                                            <div class=\"rank-item-2\">\n" +
                         "                                                <div class=\"rank-item-descrip\">\n" +
                         "                                                    <p class=\"rank-no-affer3\">"+ (i+1) +"</p>\n" +
@@ -259,6 +268,7 @@ function top100RankData(){
             }
             // append
             $("#top100-rank-table").append(str);
+            clickABind();
         }
     });
 }
@@ -349,9 +359,52 @@ function swipperRender(){
     });
 }
 
+function test() {
+    alert(1);
+}
+
 // 给电影类别跳转 加参数
 function movieSearchAnchor(pageName,obj) {
     var thisObj = $(obj);
     thisObj.attr("href",pageName+"?areaId=" + getSelectedAreaId() + "&type=" + thisObj.attr("id"));
 }
 
+// 购票的跳转
+function moviePurchase(pageName,movieId,obj) {
+    var thisObj = $(obj);
+    thisObj.attr("href",pageName+"?areaId=" + getSelectedAreaId() + "&movieId=" + movieId);
+}
+
+// 全部的跳转
+function allRank(pageName,obj) {
+    var thisObj = $(obj);
+    thisObj.attr("href",pageName+"?areaId=" + getSelectedAreaId());
+}
+
+// 渲染完轮播图后  绑定a
+function bindAction() {
+
+    $(".swiper-slide .purchase-a").click(function () {
+        // 获得当前的 movie id
+        moviePurchase('movie_choose_cinema.html',$(this).attr("name"),this);
+    });
+
+}
+
+
+// 真正跳转时候的  加上 id  渲染完成后 加上
+function clickABind() {
+    $(".detail").click(function () {
+        // 获得当前的 movie id
+        moviePurchase('movie_detail.html',$(this).attr("name"),this);
+    });
+}
+
+// purchase-a 的渲染
+function purchaseA() {
+
+    $(".purchase-a").click(function () {
+        // 获得当前的 movie id
+        moviePurchase('movie_detail.html',$(this).attr("name"),this);
+    });
+}

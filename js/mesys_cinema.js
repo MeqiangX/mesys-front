@@ -6,6 +6,7 @@ var PAGE_SIZE = 14;
 
 function initCinema(current,pageSize){
 
+
     //  初始化过程  header 中被之前跳转的页面选择的areaId 被选中的状态 所以 直接在当前被选中的areaId 去查询电影
    var areaId = getSelectedAreaId();
 
@@ -18,7 +19,7 @@ function initCinema(current,pageSize){
         async: false,
         url: "http://127.0.0.1:8080/api/backend/cinema/find-cinema-by-areaId",
         data: {
-            areaId: "110108",
+            areaId: areaId,
             current: current,
             size: pageSize
         },
@@ -29,7 +30,35 @@ function initCinema(current,pageSize){
         }
     });
 
+
+    // 绑定地区改变事件
+    $("#area-select").change(function () {
+
+        var areaId = $(this).val();//这就是selected的值
+
+        // 重载本页面
+        $.ajax({
+            type:"get",
+            async: false,
+            url: "http://127.0.0.1:8080/api/backend/cinema/find-cinema-by-areaId",
+            data: {
+                areaId: areaId,
+                current: current,
+                size: pageSize
+            },
+            success: function(data,status){
+                // 填充 div
+                pushCinemaList(data.data.records);
+                pageComponent(current,pageSize,data.data.total,data.data.pages);
+            }
+        });
+
+
+    });
+
+
 }
+
 
 
 function pushCinemaList(itemList) {

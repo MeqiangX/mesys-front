@@ -16,6 +16,13 @@ function init(){
 
 }
 
+
+// 更多电影详情
+function moreDetail() {
+    window.location.href = "movie_detail.html?areaId=" + getSelectedAreaId() + "&movieId=" + getParamFromURI("movieId");
+}
+
+
 // 得到电影基本信息
 function getMovieInfo(movieId){
     $.ajax({
@@ -143,7 +150,7 @@ function initCinema(current,pageSize){
         async: false,
         url: "http://127.0.0.1:8080/api/backend/cinema/find-cinema-by-areaId",
         data: {
-            areaId: "110108",
+            areaId: areaId,
             current: current,
             size: pageSize
         },
@@ -152,6 +159,31 @@ function initCinema(current,pageSize){
             pushCinemaList(data.data.records);
             pageComponent(current,pageSize,data.data.total,data.data.pages);
         }
+    });
+
+
+    // 绑定地区改变事件
+    $("#area-select").change(function () {
+
+        var areaId = $(this).val();//这就是selected的值
+
+        // 重载本页面
+        $.ajax({
+            type:"get",
+            async: false,
+            url: "http://127.0.0.1:8080/api/backend/cinema/find-cinema-by-areaId",
+            data: {
+                areaId: areaId,
+                current: current,
+                size: pageSize
+            },
+            success: function(data,status){
+                // 填充 div
+                pushCinemaList(data.data.records);
+                pageComponent(current,pageSize,data.data.total,data.data.pages);
+            }
+        });
+
     });
 
 }

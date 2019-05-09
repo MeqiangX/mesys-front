@@ -164,7 +164,31 @@
 }
 
 
+.update-button{
+    height: 50px;
+    position: relative;
+    top: 50px;
+}
 
+.update-button  .submit-update-button{
+    position: relative;
+    right: 50px;
+    width: 100px;
+    height: 35px;
+    font-size: 17px;
+    outline: none;
+    cursor: pointer;
+    background: #99a9bf;
+    border: none;
+    border-radius: 10px;
+}
+
+.update-button  .submit-update-button:hover{
+    background: #F03D37;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+}
 /* 订单 */
 .content-order{
     width: 100%;

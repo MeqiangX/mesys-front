@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+
+<button onclick="topay()">支付界面</button>
+
+</body>
+
+<script>
+
+    function topay() {
+        // 在这里打开一个新页面  然后执行请求方法 渲染文档
+        const payPage = window.open("","_self");
+        var html = getHtml();
+        const div = document.createElement('div');
+        div.innerHTML = html;   // html code
+        payPage.document.body.appendChild(div);
+        payPage.document.forms.punchout_form.submit();
+    }
+
+    function getHtml(){
+        var aliPay = new Object();
+        aliPay.orderId = "1126497799609778176";
+
+        var html;
+        $.ajax({
+            type:"get",
+            async:false,
+            url:"http://localhost:8082/api/protal/alipay/goAlipay",
+            data:{
+                orderId:aliPay.orderId
+            },
+            success:function (data,status) {
+                // 返回String  渲染页面
+                console.log("成功");
+                html = data;
+            },
+            error:function (status) {
+                console.log(status.responseText);
+                html = status.responseText;
+            }
+        });
+
+        return html;
+    }
+
+
+
+
+</script>
+</html>

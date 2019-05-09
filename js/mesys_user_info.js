@@ -195,6 +195,10 @@ function navTransform(option,obj) {
 
         //基本信息
 
+        // 发送异步请求 得到用户信息
+        var userInfo = getUserInfo();
+        console.log(userInfo);
+
         $(".navi-title").text("基本信息");
 
         $(".content-right-body").empty();
@@ -212,27 +216,36 @@ function navTransform(option,obj) {
             "                    <div class=\"right-message\">\n" +
             "\n" +
             "                        <p class=\"nico-name-label\">昵称：</p>\n" +
-            "                        <input type=\"text\" class=\"nico-name-input\"/>\n" +
+            "                        <input type=\"text\" class=\"nico-name-input\" value=\"" + userInfo.nicoName + "\"/>\n" +
             "\n" +
             "                        <p class=\"sex-label\">性别：</p>\n" +
             "                        <div class=\"sex-radio\">\n" +
-            "                            <input type=\"radio\"  name=\"sex\" value=\"0\"/>男\n" +
-            "                            <input type=\"radio\"  name=\"sex\" value=\"1\"/>女\n" +
+            "                            <input id=\"man\" type=\"radio\"  name=\"sex\" value=\"0\"/>男\n" +
+            "                            <input id=\"women\"type=\"radio\"  name=\"sex\" value=\"1\"/>女\n" +
             "                        </div>\n" +
             "\n" +
             "                        <p class=\"borthday-label\">生日：</p>\n" +
-            "                        <input type=\"date\" class=\"date-tool\">\n" +
+            "                        <input type=\"date\" class=\"date-tool\" value=\"" + userInfo.birthday +"\">\n" +
             "\n" +
             "                        <p class=\"hobbies-label\">兴趣爱好：</p>\n" +
-            "                        <input type=\"text\" class=\"hobbies-input\">\n" +
+            "                        <input type=\"text\" class=\"hobbies-input\" value=\""+ userInfo.hobbies +"\">\n" +
             "\n" +
             "                        <p class=\"signature-label\">个性签名：</p>\n" +
-            "                        <input type=\"text\" class=\"signature-input\">\n" +
+            "                        <input type=\"text\" class=\"signature-input\" value=\"" + userInfo.signature + "\">\n" +
             "                    </div>\n" +
+            "<div class=\"update-button\">\n" +
+            "\n" +
+            "                        <input type=\"button\" class=\"submit-update-button\" value='提交' onclick='updateInfo()'>\n" +
+            "\n" +
+            "                    </div>\n"+
             "                </div>";
 
 
         $(".content-right-body").append(str);
+
+        // sex
+        var sexId = 0 == userInfo.sex ? "man" : "women";
+        $("#"+sexId).attr("checked", true);
 
     }else{
 
@@ -264,4 +277,78 @@ function navTransform(option,obj) {
         orders(3,1,10);
     }
 
+}
+
+// 得到用户个人信息
+function getUserInfo() {
+
+    var userId = $.cookie('userId');
+
+    console.log(userId);
+
+    var result;
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8084/api/uc/user/userinfo-by-id",
+        data:{
+            userId:userId
+        },
+        success:function (data,status) {
+            if (data.success == true){
+                result = data.data;
+            }
+        }
+    });
+
+    return result;
+}
+
+
+// 跟新个人信息
+function updateInfo() {
+
+    var result = updateUserInfo();
+
+    if (result == true){
+        // 修改成功 刷新
+        alert("修改成功");
+        window.location.reload();
+    }else{
+        // 修改失败
+        alert(result);
+    }
+
+}
+
+function updateUserInfo() {
+    var userInfoPo = new Object();
+    userInfoPo.userId = $.cookie('userId');;
+    userInfoPo.nicoName = $(".nico-name-input").val();
+    userInfoPo.birthday = $(".date-tool").val();
+    userInfoPo.sex = $("input[type='radio']:checked").val();;
+    userInfoPo.hobbies = $(".hobbies-input").val();
+    userInfoPo.signature = $(".signature-input").val();
+
+    console.log(userInfoPo);
+
+    var result;
+    $.ajax({
+        type:"post",
+        async:false,
+        url:"http://localhost:8084/api/uc/user/userinfo-update",
+        dataType:"json",
+        contentType:"application/json",
+        data: JSON.stringify(userInfoPo),
+        success:function (data,status) {
+            if (data.success == true){
+                result = true;
+            }else{
+                result = data.message;
+            }
+        }
+    });
+
+
+    return result;
 }

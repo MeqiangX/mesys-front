@@ -56,7 +56,7 @@ function putOrderInfo(orderInfo){
 
     console.log(orderInfo);
 
-
+    $("#order-id").val(orderInfo.orderId);
     $(".movie-name").text(orderInfo.movieName);
     $(".time").text(orderInfo.timeScopeStart);
     $(".cinema-name").text(orderInfo.cinemaName);

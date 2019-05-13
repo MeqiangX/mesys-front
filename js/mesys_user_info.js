@@ -56,37 +56,69 @@ function putOrderList(orderList) {
 
         var  status = 0 == orderList[i].status ? "未支付" : "已支付";
 
-
-
-        str = str + "\n<div class=\"order-item\">\n" +
-            "\n" +
-            "                            <div class=\"top-info\">\n" +
-            "                                <p class=\"order-date\">" + dateFormat(new Date(orderList[i].createTime)) + "</p>\n" +
-            "                                <p class=\"order-id-label\">订单号: <span class=\"order-id\">"+ orderList[i].orderId +"</span></p>\n" +
-            "                                <a href=\"javascript:void(0)\" class=\"del-order\" name=\"\">取消订单</a>\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"bottom-info\">\n" +
-            "\n" +
-            "                                <img class=\"movie-img\" src=\"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551172384.jpg\">\n" +
-            "                                <p class=\"movie-name\">"+ orderList[i].movieName +"</p>\n" +
-            "                                <p class=\"cinema-name\">"+ orderList[i].cinemaName +"</p>\n" +
-            "                                <p class=\"screen-p\"><span class=\"screen-name\">" + orderList[i].screeningHallName + " </span><span class=\"seats\">" + "  " + orderList[i].seats.join(',') + "</span></p>\n" +
-            "                                <p class=\"time-start\">"+ orderList[i].timeScopeStart +"</p>\n" +
-            "\n" +
-            "                                <p class=\"price-label\"><span class=\"symbol\">￥</span><span>"+orderList[i].price+"</span></p>\n" +
-            "                                <p class=\"order-status\">" + status + "</p>\n" +
-            "\n" +
-            "                                <button type=\"button\" class=\"pay\">付款</button>\n" +
-            "                                <a href=\"order_detail.html?orderId="+ orderList[i].orderId +"\" class=\"order-detail\">查看详情</a>\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                        </div>\n";
+        if (orderList[i].status == 0){
+            str = str + "\n<div class=\"order-item\">\n" +
+                "\n" +
+                "                            <div class=\"top-info\">\n" +
+                "                                <p class=\"order-date\">" + dateFormat(new Date(orderList[i].createTime)) + "</p>\n" +
+                "                                <p class=\"order-id-label\">订单号: <span class=\"order-id\">"+ orderList[i].orderId +"</span></p>\n" +
+                "                                <a href=\"javascript:void(0)\" class=\"del-order\" name=\"\"0 onclick=''>取消订单</a>\n" +
+                "                            </div>\n" +
+                "\n" +
+                "                            <div class=\"bottom-info\">\n" +
+                "\n" +
+                "                                <img class=\"movie-img\" src=\""+ orderList[i].movieImage +"\">\n" +
+                "                                <p class=\"movie-name\">"+ orderList[i].movieName +"</p>\n" +
+                "                                <p class=\"cinema-name\">"+ orderList[i].cinemaName +"</p>\n" +
+                "                                <p class=\"screen-p\"><span class=\"screen-name\">" + orderList[i].screeningHallName + " </span><span class=\"seats\">" + "  " + orderList[i].seats.join(',') + "</span></p>\n" +
+                "                                <p class=\"time-start\">"+ orderList[i].timeScopeStart +"</p>\n" +
+                "\n" +
+                "                                <p class=\"price-label\"><span class=\"symbol\">￥</span><span>"+orderList[i].price+"</span></p>\n" +
+                "                                <p class=\"order-status\">" + status + "</p>\n" +
+                "\n" +
+                "                                <a  id='topay-a' name=\""+ orderList[i].orderId +"\"><button type=\"button\" class=\"pay\">付款</button></a>\n" +
+                "                                <a href=\"order_detail.html?orderId="+ orderList[i].orderId +"\" class=\"order-detail\">查看详情</a>\n" +
+                "                            </div>\n" +
+                "\n" +
+                "                        </div>\n";
+        }else{
+            str = str + "\n<div class=\"order-item\">\n" +
+                "\n" +
+                "                            <div class=\"top-info\">\n" +
+                "                                <p class=\"order-date\">" + dateFormat(new Date(orderList[i].createTime)) + "</p>\n" +
+                "                                <p class=\"order-id-label\">订单号: <span class=\"order-id\">"+ orderList[i].orderId +"</span></p>\n" +
+                "                                <a href=\"javascript:void(0)\" class=\"del-order\" name=\"\" onclick=\""+ cancelOrder(orderList[i].timeScopeStart) +"\">取消订单</a>\n" +
+                "                            </div>\n" +
+                "\n" +
+                "                            <div class=\"bottom-info\">\n" +
+                "\n" +
+                "                                <img class=\"movie-img\" src=\""+ orderList[i].movieImage +"\">\n" +
+                "                                <p class=\"movie-name\">"+ orderList[i].movieName +"</p>\n" +
+                "                                <p class=\"cinema-name\">"+ orderList[i].cinemaName +"</p>\n" +
+                "                                <p class=\"screen-p\"><span class=\"screen-name\">" + orderList[i].screeningHallName + " </span><span class=\"seats\">" + "  " + orderList[i].seats.join(',') + "</span></p>\n" +
+                "                                <p class=\"time-start\">"+ orderList[i].timeScopeStart +"</p>\n" +
+                "\n" +
+                "                                <p class=\"price-label\"><span class=\"symbol\">￥</span><span>"+orderList[i].price+"</span></p>\n" +
+                "                                <p class=\"order-status\">" + status + "</p>\n" +
+                "\n" +
+                "                                <button type=\"button\" class=\"pay\" disabled>已支付</button>\n" +
+                "                                <a href=\"order_detail.html?orderId="+ orderList[i].orderId +"\" class=\"order-detail\">查看详情</a>\n" +
+                "                            </div>\n" +
+                "\n" +
+                "                        </div>\n";
+        }
 
     }
 
     $(".order-list").empty();
     $(".order-list").append(str);
+
+    // 渲染完后 绑定 去支付的 事件
+    $("#topay-a").on('click',function () {
+        alert($(this).attr('name'));
+        topay($(this).attr('name'));
+    })
+
 }
 
 /*分页组件*/
@@ -351,4 +383,16 @@ function updateUserInfo() {
 
 
     return result;
+}
+
+
+// 取消订单 在放映前15分钟 和当前时间比较 如果当前时间在放映15分钟前  可以执行
+function cancelOrder(startTimeScope) {
+
+    if (is15MinueBefore(startTimeScope,new Date())){
+        alert("执行取消订单操作");
+    }else{
+        alert("当前时间在放映前15分钟内，无法取消");
+    }
+
 }

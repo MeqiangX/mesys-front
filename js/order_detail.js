@@ -8,9 +8,11 @@ function init() {
     var orderInfo = initOrderInfo();
     putOrderInfo(orderInfo);
 
+    if (orderInfo.status == 1){
+        return ;
+    }
     var second = initCountDown();
     countdown(second);
-
 
 }
 
@@ -38,7 +40,17 @@ function putOrderInfo(orderInfo){
 
     console.log(orderInfo);
 
-    $(".order-id-text").text(orderId);
+
+    // 如果是已经支付的订单  不展示倒计时 显示已经支付 并且没有支付按钮
+    if (orderInfo.status == 1){
+        $(".ready-pay-label").text("已支付");
+        $(".count-down").empty();
+        $(".pay-button").text("已支付");
+        $(".pay-button").attr("disabled",true);
+    }
+
+
+    $("#order-id-text").attr('value',orderInfo.orderId);
     $(".movie-name").text(orderInfo.movieName);
     $(".time").text(orderInfo.timeScopeStart);
     $(".cinema-name").text(orderInfo.cinemaName);

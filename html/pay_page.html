@@ -120,9 +120,9 @@
 
     <!-- 支付按钮 -->
     <div class="pay-model">
-
-        <p class="pay-label">实际支付：<span class="price-symbol">￥</span><span class="total-price">80</span></p>
-        <button class="pay-button">确认支付</button>
+        <input type="hidden" id="order-id" value="">
+        <p class="pay-label">实际支付：<span class="price-symbol">￥</span><span class="total-price"></span></p>
+        <button class="pay-button" onclick="topay(document.getElementById('order-id').value)">确认支付</button>
     </div>
 
 </div>

@@ -72,7 +72,7 @@ function changeLoginOption() {
             "                <input type=\"password\" class=\"input-password\" placeholder=\"密码\">\n" +
             "                <a href=\"javascript:void(0)\" class=\"forget-pwd\">忘记密码</a>\n" +
             "                <input type=\"button\" class=\"login-button\" value=\"登录\" onclick='login(0)'>\n" +
-            "                <p class=\"no-account-label\">还没有账号?</p><a href=\"javascript:void(0)\" class=\"register\">免费注册</a>\n" +
+            "                <p class=\"no-account-label\">还没有账号?</p><a href=\"register.html\" class=\"register\">免费注册</a>\n" +
             "           ";
     }else{
 

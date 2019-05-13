@@ -211,6 +211,8 @@ function renderArrangeList(movieId,date) {
 
         if (arrangeList[j].arrangeDate == date){
 
+            // 开场前15分钟开始 无法购买 无法退票
+
             if (j % 2 == 0){
                 // 无背景色
                 str = str + " <div class=\"table-body-row table-body-row-no-back\">\n" +

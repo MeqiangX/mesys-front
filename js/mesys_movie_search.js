@@ -46,7 +46,7 @@ function search(current,pageSize,search){
             search: search
         },
         success: function (data,status) {
-            alert("data :  " + data + "status : " + status);
+            //alert("data :  " + data + "status : " + status);
             setResult(data.data.records);
 
             pageComponent(search,data.data.current,data.data.size,data.data.pages);
@@ -73,11 +73,11 @@ function setResult(itemList) {
                     "            <div class=\"result-col\">\n" +
                     "\n" +
                     "                <div class=\"result-img\">\n" +
-                    "                    <img src=\""+ itemList[i].image +"\">\n" +
+                    "                 <a href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><img src=\""+ itemList[i].image +"\"></a>\n" +
                     "                </div>\n" +
                     "\n" +
                     "                <div class=\"result-movie-info\">\n" +
-                    "                    <p class=\"result-name\">"+ itemList[i].movieName +"</p>\n" +
+                    "                    <a style='text-decoration: none' href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><p class=\"result-name\">"+ itemList[i].movieName +"</p></a>\n" +
                     "                    <p class=\"result-original-name\">"+ itemList[i].originalName +"</p>\n" +
                     "                    <p class=\"result-rating\">"+ itemList[i].rating +"</p>\n" +
                     "                    <p class=\"result-genres\">"+ itemList[i].genres +"</p>\n" +
@@ -88,11 +88,11 @@ function setResult(itemList) {
             }else{
                 str = str + "<div class=\"result-col-right\">\n" +
                     "                <div class=\"result-img\">\n" +
-                    "                    <img src=\""+ itemList[i].image +"\">\n" +
+                    "                 <a href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><img src=\""+ itemList[i].image +"\"></a>\n" +
                     "                </div>\n" +
                     "\n" +
                     "                <div class=\"result-movie-info\">\n" +
-                    "                    <p class=\"result-name\">"+ itemList[i].movieName +"</p>\n" +
+                    "                    <a style='text-decoration: none' href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><p class=\"result-name\">"+ itemList[i].movieName +"</p></a>\n" +
                     "                    <p class=\"result-original-name\">" + itemList[i].originalName + "</p>\n" +
                     "                    <p class=\"result-rating\">" + itemList[i].rating + "</p>\n" +
                     "                    <p class=\"result-genres\">"+ itemList[i].genres +"</p>\n" +
@@ -116,11 +116,11 @@ function setResult(itemList) {
                     "            <div class=\"result-col\">\n" +
                     "\n" +
                     "                <div class=\"result-img\">\n" +
-                    "                    <img src=\""+ itemList[i].image +"\">\n" +
+                    "                 <a href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><img src=\""+ itemList[i].image +"\"></a>\n" +
                     "                </div>\n" +
                     "\n" +
                     "                <div class=\"result-movie-info\">\n" +
-                    "                    <p class=\"result-name\">"+itemList[i].movieName +"</p>\n" +
+                    "                    <a style='text-decoration: none' href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><p class=\"result-name\">"+ itemList[i].movieName +"</p></a>\n" +
                     "                    <p class=\"result-original-name\">" + itemList[i].originalName + "</p>\n" +
                     "                    <p class=\"result-rating\">"+ itemList[i].rating +"</p>\n" +
                     "                    <p class=\"result-genres\">"+ itemList[i].genres +"</p>\n" +
@@ -136,11 +136,11 @@ function setResult(itemList) {
                     "            <div class=\"result-col\">\n" +
                     "\n" +
                     "                <div class=\"result-img\">\n" +
-                    "                    <img src=\""+ itemList[i].image +"\">\n" +
+                    "                 <a href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><img src=\""+ itemList[i].image +"\"></a>\n" +
                     "                </div>\n" +
                     "\n" +
                     "                <div class=\"result-movie-info\">\n" +
-                    "                    <p class=\"result-name\">"+ itemList[i].movieName +"</p>\n" +
+                    "                    <a style='text-decoration: none' href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><p class=\"result-name\">"+ itemList[i].movieName +"</p></a>\n" +
                     "                    <p class=\"result-original-name\">"+ itemList[i].originalName +"</p>\n" +
                     "                    <p class=\"result-rating\">"+ itemList[i].rating +"</p>\n" +
                     "                    <p class=\"result-genres\">"+ itemList[i].genres +"</p>\n" +
@@ -153,11 +153,11 @@ function setResult(itemList) {
             }else{
                 str = str + "<div class=\"result-col-right\">\n" +
                     "                <div class=\"result-img\">\n" +
-                    "                    <img src=\""+ itemList[i].image +"\">\n" +
+                    "                 <a href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><img src=\""+ itemList[i].image +"\"></a>\n" +
                     "                </div>\n" +
                     "\n" +
                     "                <div class=\"result-movie-info\">\n" +
-                    "                    <p class=\"result-name\">"+ itemList[i].movieName +"</p>\n" +
+                    "                    <a style='text-decoration: none' href=\"movie_detail.html?movieId="+ itemList[i].movieId +"\"><p class=\"result-name\">"+ itemList[i].movieName +"</p></a>\n" +
                     "                    <p class=\"result-original-name\">"+ itemList[i].originalName +"</p>\n" +
                     "                    <p class=\"result-rating\">"+ itemList[i].rating +"</p>\n" +
                     "                    <p class=\"result-genres\">"+ itemList[i].genres +"</p>\n" +

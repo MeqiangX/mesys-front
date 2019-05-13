@@ -266,3 +266,41 @@ function logout() {
 function commonSearchButton() {
     window.location.href = "movie_search.html?search="+$("#searchInput").val();
 }
+
+
+
+// 支付
+function topay(orderId) {
+    // 在这里打开一个新页面  然后执行请求方法 渲染文档
+    const payPage = window.open("","_self");
+    var html = getHtml(orderId);
+    const div = document.createElement('div');
+    div.innerHTML = html;   // html code
+    payPage.document.body.appendChild(div);
+    payPage.document.forms.punchout_form.submit();
+}
+
+function getHtml(orderId){
+    var html;
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8082/api/protal/alipay/goAlipay",
+        data:{
+            orderId:orderId
+        },
+        success:function (data,status) {
+            // 返回String  渲染页面
+            console.log("成功");
+            html = data;
+        },
+        error:function (status) {
+            console.log(status.responseText);
+            html = status.responseText;
+        }
+    });
+
+    return html;
+}
+
+

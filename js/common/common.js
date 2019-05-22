@@ -47,6 +47,25 @@ function usersStatus() {
 }
 
 
+// 检测用户是否登录  未登录 跳转到登录页面 并且在登录完成之后 跳转回页面
+function checkIsLoginToJump(uri) {
+
+    var status = usersStatus();
+
+    if (status){
+        // 已经登录
+        return ;
+    }else{
+        // 跳转到登录 并且带上uri 用来跳转回来
+        alert("未登录，请先登录再进行购票");
+        console
+            .log("跳转的地址：" + "login.html?jump="+uri);
+
+        window.location.href = "login.html?jump="+uri;
+
+    }
+}
+
 // 个人中悬停下拉框的初始化
 function initUserInfoCenter() {
 

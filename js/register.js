@@ -87,6 +87,7 @@ function submitForm() {
                 if (data.success == true){
                     // 成功
                     alert("注冊成功");
+                    window.location.href = "login.html";
                 }else{
                     // 打印message的 失败信息
                     alert(data.message);
@@ -166,6 +167,9 @@ function checkPhone() {
 
 // 发送验证码
 function sendMessage() {
+
+    // 先验证手机号是否注册
+
     $.ajax({
         type:"post",
         async: false,
@@ -212,7 +216,6 @@ function codeCheck(phone,inputCode) {
 
                 //比较
                 if (code == inputCode){
-                    alert("相同-- 返回 true");
                     // 相同
                     $(".code-img").attr("src","../image/icon/right.svg");
                     $(".code-info").text("");
@@ -226,7 +229,7 @@ function codeCheck(phone,inputCode) {
 
             }else{
                 // 验证码已经过期
-                alert(data.message);
+                //alert(data.message);
                 result = false;
             }
 

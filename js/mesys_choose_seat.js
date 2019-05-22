@@ -4,6 +4,10 @@
 var sc; // seats 插件
 
 function init() {
+
+    // 检测用户是否登录 未登录返回到登录页面 登录 完成 回来 选座页面 记录下uri
+    checkIsLoginToJump(window.location.href);
+
     steps1 = steps({
         el: "#steps1",
         center: true,
@@ -26,6 +30,8 @@ function init() {
 
 
     var arrangeId = getParamFromURI("arrangeId");
+    console
+        .log(arrangeId);
     var movieInfo = initMovie(arrangeId);
     var seatList = initSeats(arrangeId);
 
@@ -33,6 +39,9 @@ function init() {
     // 填充数据 电影
     putMovieInfo(movieInfo);
 
+    // 填充用户手机
+    var user = usersStatus();
+    $(".phone").text(user.phone);
     // 初始化座位
     initSeatData(seatList);
 

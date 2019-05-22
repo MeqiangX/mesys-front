@@ -18,15 +18,14 @@ body{
 }
 
 .header img{
-    position: absolute;
+   /* position: absolute;
     width: 30%;
-    height: 390px;
-    bottom: 480px;
+    height:50px;
+    bottom: 480px;*/
 }
 
 .header hr{
     position: relative;
-    top: 120px;
 }
 
 

@@ -119,7 +119,6 @@ function movieArrangeListPush(movieId,date) {
     //当没有日期的时候 (初始化) 默认选中第一个日期
 
     // 否则渲染参数日期的 排片
-
     var item = new Object();
 
     for (var i = 0;i < movieArrange.length;++i){
@@ -136,42 +135,53 @@ function movieArrangeListPush(movieId,date) {
     if (undefined == date){
 
         // 渲染第一个
+
+        // 将item 的  movieArrangeList 转化 为日期为key  value 为list 的对象
+        var arrangeMapArray = new Map();
         var arrangeList = item.movieArrangeList;
 
+        for (var i = 0;i < arrangeList.length;++i){
+            if (null == arrangeMapArray.get(arrangeList[i].arrangeDate)){
+                arrangeMapArray.set(arrangeList[i].arrangeDate, new Array());
+            }
+            arrangeMapArray.get(arrangeList[i].arrangeDate).push(arrangeList[i]);
+        }
+        console.log(arrangeMapArray);
         var str = new String();
 
-        for (var j = 0;j < arrangeList.length;++j){
-            if (j == 0 && arrangeList.length == 1){
-                str = str + " <ul>\n" +
-                    "                    <li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">" +  arrangeList[j].arrangeDate +"</a></li>" +
-                    "</ul>\n";
-            }else if (j == 0){
-                str = str + "  <ul>\n" +
-                    "                    <li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" name=\"" +  arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+  arrangeList[j].arrangeDate +"</a></li>\n";
-            }else if (j == arrangeList.length-1){
-                str = str + " <li class=\"no-choose\"><a class='no-choose' href=\"javascript:void(0)\" name=\"" +  arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+  arrangeList[j].arrangeDate +"</a></li>\n" +
-                    "                </ul>\n";
-            }else{
-                str = str + "  <li class=\"no-choose\"><a href=\"javascript:void(0)\" class=\"no-choose\" name=\"" +  arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+  arrangeList[j].arrangeDate +"</a></li>\n";
-            }
-        }
+        var index = 0;
+        arrangeMapArray.forEach(function (value,key,map) {
+
+            // 只遍历每个key
+
+            // 通过时间生成
+
+                var list = value;
+                if (index == 0){
+                    str = str + " <ul>\n" +
+                        "                    <li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" id=\"arrange"+ index +"\" name=\"" + key + "\" onclick=\"renderArrangeList('"+ index +"','"+ movieId +"','"+ key +"')\">" +  key +"</a></li>\n";
+               }else{
+                    str = str + " <li class=\"no-choose\"><a class='no-choose' href=\"javascript:void(0)\" id=\"arrange"+ index +"\" name=\"" +  key + "\" onclick=\"renderArrangeList('"+ index +"','"+ movieId +"','"+ key +"')\">"+  key +"</a></li>\n";
+                }
+                index++;
+        });
     }else{
         // 渲染所给的 时间
         str = str + "<ul>\n";
         for (var j = 0;j < arrangeList.length;++j){
             if (arrangeList[j].arrangeDate == date){
-                str = str + "<li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+ arrangeList[j].arrangeDate +"</a></li>\n";
+                str = str + "<li class=\"choosed\"><a href=\"javascript:void(0)\" class=\"choosed\" id=\"arrange"+ j +"\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ j +"','"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+ arrangeList[j].arrangeDate +"</a></li>\n";
             }else{
-                str = str + "<li class=\"no-choose\"><a href=\"javascript:void(0)\" class=\"no-choose\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+ arrangeList[j].arrangeDate +"</a></li>\n";
+                str = str + "<li class=\"no-choose\"><a href=\"javascript:void(0)\" class=\"no-choose\" id=\"arrange"+ j +"\" name=\"" + arrangeList[j].arrangeDate + "\" onclick=\"renderArrangeList('"+ j +"','"+ movieId +"','"+ arrangeList[j].arrangeDate +"')\">"+ arrangeList[j].arrangeDate +"</a></li>\n";
             }
         }
-        str = str + "</ul>\n";
     }
+
+    str = str + "</ul>\n";
 
     // 填充时间标签
 
     //  选择第一个
-
 
     $(".time-list-model").empty();
     $(".time-list-model").append(str);
@@ -179,12 +189,28 @@ function movieArrangeListPush(movieId,date) {
     // 渲染后 触发一次渲染排片列表事件  在每个的时间标签上也绑定事件
 
     // 得到当前选中的 a  得到 name time
-    renderArrangeList(movieId,$("a[class$='choosed']").attr("name"));
+    renderArrangeList(null,movieId,$("a[class$='choosed']").attr("name"));
 }
 
 
 // 渲染排片列表
-function renderArrangeList(movieId,date) {
+function renderArrangeList(obj,movieId,date) {
+
+    if (obj != null){
+        console.log(obj);
+        // 得到其他的choosed  换成nochoose  this 换成 choosed
+
+        $(".choosed").addClass("no-choose");
+        $(".choosed").parent().addClass("no-choose");
+        $(".choosed").parent().removeClass("choosed");
+        $(".choosed").removeClass("choosed");
+
+        $("#"+ "arrange" + obj).parent().removeClass("no-choose");
+        $("#"+ "arrange" + obj).removeClass("no-choose");
+        $("#"+ "arrange" + obj).parent().addClass("choosed");
+        $("#"+ "arrange" + obj).addClass("choosed");
+    }
+
 
     //渲染当天的时间排片列表
     var str = new String();
@@ -205,6 +231,7 @@ function renderArrangeList(movieId,date) {
     // 时间不可能传空的
     var arrangeList = item.movieArrangeList;
 
+    console.log("当前列表");
     console.log(arrangeList);
 
     for (var j = 0; j < arrangeList.length;++j){

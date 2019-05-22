@@ -1,10 +1,11 @@
 var PAGE_SIZE = 14;
 
+var movieId;
 
 /*初始化 电影信息*/
 function init(){
 
-    var movieId = getParamFromURI("movieId");
+    movieId = getParamFromURI("movieId");
 
     if (movieId != null){
         // 发送 ajax 请求  得到数据 填充
@@ -151,6 +152,7 @@ function initCinema(current,pageSize){
         url: "http://127.0.0.1:8080/api/backend/cinema/find-cinema-by-areaId",
         data: {
             areaId: areaId,
+            movieId:movieId,
             current: current,
             size: pageSize
         },
@@ -174,6 +176,7 @@ function initCinema(current,pageSize){
             url: "http://127.0.0.1:8080/api/backend/cinema/find-cinema-by-areaId",
             data: {
                 areaId: areaId,
+                movieId:movieId,
                 current: current,
                 size: pageSize
             },

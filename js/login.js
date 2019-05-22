@@ -206,10 +206,27 @@ function login(loginOption) {
                 // 登录成功 将用户的id  放入cookies 中
 
                 //common 页面 通过拿到cookies 中的 userId  来去后台查询  登录状态
+
                 $.cookie('userId', data.data.id);
 
+                // 执行跳转 从uri上拿到 jump 参数  如果有 则有执行跳转的页面 否则跳转到主页
+                var jumpURI = getParamFromURI("jump");
 
-                window.location.href='index.html';
+                var uri = window.location.href;
+                // 因为页面带有参数 所以不能用这个
+                var splitList = uri.split("?"); // 除了第一个 剩下的 都是带的参数
+
+                alert(splitList);
+
+                if (splitList.length > 1){
+                    // 去掉jump= 加上后面的参数
+                    var toURI = splitList[1].substr(5) + "?" + splitList[2];
+                    alert(toURI);
+                    window.location.href = toURI;
+                }else{
+                    window.location.href='index.html';
+                }
+
             }else{
                 alert(data.message);
                 return false;

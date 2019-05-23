@@ -62,7 +62,7 @@ function putOrderList(orderList) {
                 "                            <div class=\"top-info\">\n" +
                 "                                <p class=\"order-date\">" + dateFormat(new Date(orderList[i].createTime)) + "</p>\n" +
                 "                                <p class=\"order-id-label\">订单号: <span class=\"order-id\">"+ orderList[i].orderId +"</span></p>\n" +
-                "                                <a href=\"javascript:void(0)\" class=\"del-order\" name=\"\"0 onclick=''>取消订单</a>\n" +
+                "                                <a href=\"javascript:void(0)\" class=\"del-order\" name=\""+orderList[i].timeScopeStart+"\">取消订单</a>\n" +
                 "                            </div>\n" +
                 "\n" +
                 "                            <div class=\"bottom-info\">\n" +
@@ -87,7 +87,7 @@ function putOrderList(orderList) {
                 "                            <div class=\"top-info\">\n" +
                 "                                <p class=\"order-date\">" + dateFormat(new Date(orderList[i].createTime)) + "</p>\n" +
                 "                                <p class=\"order-id-label\">订单号: <span class=\"order-id\">"+ orderList[i].orderId +"</span></p>\n" +
-                "                                <a href=\"javascript:void(0)\" class=\"del-order\" name=\"\" onclick=\""+ cancelOrder(orderList[i].timeScopeStart) +"\">取消订单</a>\n" +
+                "                                <a href=\"javascript:void(0)\" class=\"del-order\" name=\""+ orderList[i].timeScopeStart +"\">取消订单</a>\n" +
                 "                            </div>\n" +
                 "\n" +
                 "                            <div class=\"bottom-info\">\n" +
@@ -114,11 +114,18 @@ function putOrderList(orderList) {
     $(".order-list").append(str);
 
     // 渲染完后 绑定 去支付的 事件
-    $("#topay-a").on('click',function () {
+    $("#del-order").on('click',function () {
         alert($(this).attr('name'));
         topay($(this).attr('name'));
     })
 
+
+    // 渲染 取消订单的事件
+    $(".del-order").on('click',function () {
+
+        // 获得当前节点的前一个兄弟节点的第一个子节点 即订单号
+        cancelOrder($(this).prev().find("span").text(),$(this).attr('name'));
+    })
 }
 
 /*分页组件*/
@@ -306,7 +313,7 @@ function navTransform(option,obj) {
 
         // 添加节点之后 触发一次 查询
 
-        orders(3,1,10);
+        orders($.cookie('userId'),1,10);
     }
 
 }
@@ -386,13 +393,44 @@ function updateUserInfo() {
 }
 
 
-// 取消订单 在放映前15分钟 和当前时间比较 如果当前时间在放映15分钟前  可以执行
-function cancelOrder(startTimeScope) {
+// 取消订单 在放映前15分钟(2019年5月23日11:01:00 更改 只能去取消未开场的场次) 和当前时间比较 如果当前时间在放映15分钟前  可以执行
+function cancelOrder(orderId,startTimeScope) {
 
     if (is15MinueBefore(startTimeScope,new Date())){
         alert("执行取消订单操作");
+        var result = cancelRequest(orderId);
+        if (result){
+            // 成功 刷新页面
+            alert("取消成功");
+            window.location.reload();
+        }else{
+             // 失败
+            alert(result);
+        }
     }else{
-        alert("当前时间在放映前15分钟内，无法取消");
+        alert("该场次已经开始，无法取消");
     }
 
+}
+
+
+// 取消订单 发送请求
+function cancelRequest(orderId) {
+    var result;
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8082/api/portal/order/cancel-order",
+        data: {
+            orderId:orderId
+        },
+        success:function (data,status) {
+            if (data.success == true){
+                result = data.data;
+            }else{
+                result = data.message;
+            }
+        }
+    });
+    return result;
 }

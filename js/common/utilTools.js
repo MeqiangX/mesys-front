@@ -84,7 +84,7 @@ function dateFormat(date) {
 function is15MinueBefore(arrangeTime,now) {
 
     var arrange = new Date(arrangeTime);
-    arrange.setMinutes (arrange.getMinutes () - 15);  // 看放映时间前15 分钟和 当前时间的比较 arrange > now 才能操作
+    /*arrange.setMinutes (arrange.getMinutes () - 15);  // 看放映时间前15 分钟和 当前时间的比较 arrange > now 才能操作*/
 
     var time = diffTime(now,arrange);
     console

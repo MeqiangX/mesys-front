@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e693caf-a334-4ed5-a3fd-2ef9e9da0611" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/common/utilTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common/utilTools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mesys_user_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mesys_user_info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/common/footer.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,17 +50,26 @@
       <file leaf-file-name="mesys_cinema_choose_movie.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/mesys_cinema_choose_movie.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2442">
-              <caret line="111" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="159">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+            <state relative-caret-position="220">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/common/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -69,7 +77,7 @@
       <file leaf-file-name="mesys_user_info.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/mesys_user_info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
+            <state relative-caret-position="401">
               <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
             </state>
           </provider>
@@ -78,13 +86,8 @@
       <file leaf-file-name="mesys_user_info.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mesys_user_info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
+            <state relative-caret-position="401">
               <caret line="396" column="46" lean-forward="true" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/mesys_movie_rank.css" />
         <option value="$PROJECT_DIR$/css/mesys_movie_search.css" />
         <option value="$PROJECT_DIR$/css/mesys_cinema.css" />
         <option value="$PROJECT_DIR$/css/mesys_movie_detail.css" />
@@ -195,6 +197,7 @@
         <option value="$PROJECT_DIR$/js/login.js" />
         <option value="$PROJECT_DIR$/js/common/utilTools.js" />
         <option value="$PROJECT_DIR$/js/mesys_user_info.js" />
+        <option value="$PROJECT_DIR$/html/common/footer.html" />
       </list>
     </option>
   </component>
@@ -207,9 +210,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="136" />
-    <option name="y" value="84" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="261" />
+    <option name="y" value="47" />
     <option name="width" value="1075" />
     <option name="height" value="654" />
   </component>
@@ -228,11 +231,6 @@
             <path>
               <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -330,25 +328,27 @@
       <workItem from="1558536285750" duration="1226000" />
       <workItem from="1558580261790" duration="11240000" />
       <workItem from="1558625125728" duration="599000" />
-      <workItem from="1558627307687" duration="1454000" />
+      <workItem from="1558627307687" duration="1578000" />
+      <workItem from="1558660931686" duration="605000" />
+      <workItem from="1558664584446" duration="6548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="592307000" />
+    <option name="totallyTimeSpent" value="599584000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-17" y="28" width="1075" height="654" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75113124" visible="true" weight="0.11713031" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74509805" visible="true" weight="0.2710104" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23133236" side_tool="true" visible="true" weight="0.30283913" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2332389" side_tool="true" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.76866764" visible="true" weight="0.30283913" />
-      <window_info id="Favorites" order="2" sideWeight="0.24886878" side_tool="true" visible="true" weight="0.11713031" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7667611" visible="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.25490198" side_tool="true" visible="true" weight="0.2710104" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -371,13 +371,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mesys_forget.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -683,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mesys_cinema_choose_movie.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2442">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mesys_cinema_choose_movie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7348">
@@ -699,27 +685,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/mesys_user_info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
+        <state relative-caret-position="401">
           <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mesys_user_info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
+        <state relative-caret-position="401">
           <caret line="396" column="46" lean-forward="true" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mesys_cinema_choose_movie.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+        <state relative-caret-position="220">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/common/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>

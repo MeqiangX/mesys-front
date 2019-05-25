@@ -9,6 +9,28 @@ function getUserIdFromCookies() {
     return userId;
 }
 
+function setLocation() {
+
+    var result;
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8081/api/common/get-localtion",
+        xhrFields:{
+            withCredentials: true
+        },
+        crossDomain: true,
+        success:function (data,status) {
+            console
+                .log(data);
+            if (data.success == true)
+                result = data.data.content.address;
+        }
+    });
+
+    return result;
+
+}
 
 //查看用户登录状态
 function usersStatus() {
@@ -232,6 +254,9 @@ function initNavi(pageTypeCode){
     // 个人中心的 初始化
     initUserInfoCenter();
 
+    // footer 地理位置的初始化
+    var location = setLocation();
+    $("#location").text(location);
   /*  $(document).ready(function() {
         $('.singleSelect').select2();
     });*/

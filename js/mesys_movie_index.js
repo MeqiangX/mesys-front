@@ -91,7 +91,7 @@ function commingRankData(){
                         "                                    <span id=\"score"+ starOrScoreNum +"\" class=\"score\">"+item.rating+"</span>\n" +
                         "                                </div>\n" +
                         "                                <div class=\"comming-list-button-group\">\n" +
-                        "                                    <input type=\"button\" value=\"预告片\" name=\"预告片\" class=\"comming-list-button-preView\"/>\n" +
+                        "                                    <input type=\"button\" value=\"电影详情\" name=\""+ item.moveiId +"\" class=\"comming-list-button-preView\" />\n" +
                         "                                    <a class='purchase-a' name=\"" + item.movieId + "\" style='text-decoration: none'><input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\" /></a>\n" +
                         "                                </div>\n" +
                         "                            </td>\n";
@@ -107,7 +107,7 @@ function commingRankData(){
                         "                                    <span id=\"score"+ starOrScoreNum +"\" class=\"score\">"+item.rating+"</span>\n" +
                         "                                </div>\n" +
                         "                                <div class=\"comming-list-button-group\">\n" +
-                        "                                    <input type=\"button\" value=\"预告片\" name=\"预告片\" class=\"comming-list-button-preView\"/>\n" +
+                        "                                    <input type=\"button\" value=\"电影详情\" name=\""+ item.movieId +"\" class=\"comming-list-button-preView\"/>\n" +
                         "                                    <a class='purchase-a' name=\"" + item.movieId + "\" style='text-decoration: none'><input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\"/></a>\n" +
                         "                                </div>\n" +
                         "                            </td>\n" +
@@ -124,7 +124,7 @@ function commingRankData(){
                         "                                    <span id=\"score"+ starOrScoreNum +"\" class=\"score\">"+item.rating+"</span>\n" +
                         "                                </div>\n" +
                         "                                <div class=\"comming-list-button-group\">\n" +
-                        "                                    <input type=\"button\" value=\"预告片\" name=\"预告片\" class=\"comming-list-button-preView\"/>\n" +
+                        "                                    <input type=\"button\" value=\"电影详情\" name=\""+ item.movieId +"\" class=\"comming-list-button-preView\" />\n" +
                         "                                    <a class='purchase-a' name=\"" + item.movieId + "\" style='text-decoration: none'><input type=\"button\" value=\"预售\" name=\"预售\" class=\"comming-list-button-prePurchase\" /></a>\n" +
                         "                                </div>\n" +
                         "                            </td>\n";
@@ -134,10 +134,16 @@ function commingRankData(){
             $("#comming-list").append(str);
             clickABind();
             purchaseA();
-
+            detailBind();
         }
     });
 };
+
+
+// 测试
+function detail(movieId) {
+    window.location.href="movie_detail.html?areaId=" + getSelectedAreaId() + "&movieId=" + movieId;
+}
 
 // 热播  7
 function newRankData(){
@@ -406,5 +412,12 @@ function purchaseA() {
     $(".purchase-a").click(function () {
         // 获得当前的 movie id
         moviePurchase('movie_detail.html',$(this).attr("name"),this);
+    });
+}
+
+function detailBind() {
+    $(".comming-list-button-preView").click(function () {
+        // 获得当前的 movie id
+        detail($(this).attr("name"));
     });
 }

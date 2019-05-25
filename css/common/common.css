@@ -61,7 +61,20 @@ html body {
     height: 8%;
     width: 100%;
     top: 5%;
-    background-color: #ffc6ae;
+    background-color: #262426;
+}
+
+
+#footer p{
+    position: relative;
+    color:#455C5C;
+    font-size: 17px;
+    top: 17px;
+    padding-top: 10px;
+}
+
+#footer a{
+    color: #BB3B38;
 }
 
 #navigation {

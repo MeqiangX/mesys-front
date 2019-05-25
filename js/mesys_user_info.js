@@ -236,6 +236,9 @@ function navTransform(option,obj) {
 
         // 发送异步请求 得到用户信息
         var userInfo = getUserInfo();
+        userInfo.nicoName = null == userInfo.nicoName ? "" : userInfo.nicoName;
+        userInfo.hobbies = null == userInfo.hobbies ? "" : userInfo.hobbies;
+        userInfo.signature = null == userInfo.signature ? "" : userInfo.signature;
         console.log(userInfo);
 
         $(".navi-title").text("基本信息");

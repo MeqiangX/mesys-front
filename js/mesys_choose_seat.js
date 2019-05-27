@@ -391,14 +391,15 @@ function seatToSeatId(seatObjList,arrangeId) {
 function isAllowPurchase(seatIds){
 
     var result;
-
+    console.log(seatIds);
+    console.log(JSON.stringify(seatIds));
     $.ajax({
-        type:"get",
+        type:"post",
         async:false,
+        dataType:"json",
+        contentType:"application/json",
         url:"http://localhost:8082/api/portal/order/allow-purchased",
-        data:{
-            seats:seatIds // 上一步得到的坐席ids
-        },
+        data:JSON.stringify(seatIds),
         success:function (data,status) {
             // 返回的是被预定的坐席id 如果都没有 则正常都可预订
             if (data.success == true){

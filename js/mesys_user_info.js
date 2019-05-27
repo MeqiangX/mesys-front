@@ -76,7 +76,7 @@ function putOrderList(orderList) {
                 "                                <p class=\"price-label\"><span class=\"symbol\">￥</span><span>"+orderList[i].price+"</span></p>\n" +
                 "                                <p class=\"order-status\">" + status + "</p>\n" +
                 "\n" +
-                "                                <a  id='topay-a' name=\""+ orderList[i].orderId +"\"><button type=\"button\" class=\"pay\">付款</button></a>\n" +
+                "                                <a  class='topay-a' name=\""+ orderList[i].orderId +"\"><button type=\"button\" class=\"pay\">付款</button></a>\n" +
                 "                                <a href=\"order_detail.html?orderId="+ orderList[i].orderId +"\" class=\"order-detail\">查看详情</a>\n" +
                 "                            </div>\n" +
                 "\n" +
@@ -114,7 +114,7 @@ function putOrderList(orderList) {
     $(".order-list").append(str);
 
     // 渲染完后 绑定 去支付的 事件
-    $("#del-order").on('click',function () {
+    $(".topay-a").on('click',function () {
         alert($(this).attr('name'));
         topay($(this).attr('name'));
     })

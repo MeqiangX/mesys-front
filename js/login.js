@@ -200,6 +200,10 @@ function login(loginOption) {
         crossDomain:true,
         success:function (data,status) {
 
+            console.log("登录之后");
+            console.log(data);
+            console.log("cookie中的用户id : "+$.cookie("userId"));
+            console.log("----------------------------");
             if (true == data.success){
                 // 登录成功 跳转到Index  在跳转之前  将用户信息放在common 中
 
@@ -208,7 +212,7 @@ function login(loginOption) {
                 //common 页面 通过拿到cookies 中的 userId  来去后台查询  登录状态
 
                 $.cookie('userId', data.data.id);
-
+                console.log("设置完成后 --> cookie中的用户id : "+$.cookie("userId"));
                 // 执行跳转 从uri上拿到 jump 参数  如果有 则有执行跳转的页面 否则跳转到主页
                 var jumpURI = getParamFromURI("jump");
 

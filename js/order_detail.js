@@ -50,7 +50,7 @@ function putOrderInfo(orderInfo){
     }
 
 
-    $("#order-id-text").attr('value',orderInfo.orderId);
+    $(".order-id-text").text(orderInfo.orderId);
     $(".movie-name").text(orderInfo.movieName);
     $(".time").text(orderInfo.timeScopeStart);
     $(".cinema-name").text(orderInfo.cinemaName);
@@ -133,8 +133,6 @@ function countdown(second) {
 
 // 清除过期未支付订单
 function clearTimeoutOrder(orderId) {
-
-    alert("进入");
 
     var result = false;
     $.ajax({

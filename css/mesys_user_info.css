@@ -258,28 +258,33 @@
 .bottom-info .movie-name{
     position: relative;
     bottom: 100px;
-    right: 230px;
+    /*right: 300px;*/
     font-size: 20px;
+    left: 180px;
+    text-align: left;
 }
 
 .bottom-info .cinema-name{
     position: relative;
     bottom: 100px;
-    right: 208px;
+    left: 180px;
+    text-align: left;
     color:  #999999;
 }
 
 .bottom-info .screen-p{
     position: relative;
     bottom: 100px;
-    right: 175px;
+    left: 180px;
+    text-align: left;
     color:  #999999;
 }
 
 .bottom-info .time-start{
     position: relative;
     bottom: 95px;
-    right: 203px;
+    left: 180px;
+    text-align: left;
     color: #F03D37;
 }
 

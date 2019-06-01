@@ -315,6 +315,11 @@ function commonSearchButton() {
 
 // 支付
 function topay(orderId) {
+
+    console.log(orderId);
+    // 跳转支付前的校验 订单未支付并且未过期  否则不跳转
+    beforeToPay(orderId);
+
     // 在这里打开一个新页面  然后执行请求方法 渲染文档
     const payPage = window.open("","_self");
     var html = getHtml(orderId);
@@ -322,6 +327,64 @@ function topay(orderId) {
     div.innerHTML = html;   // html code
     payPage.document.body.appendChild(div);
     payPage.document.forms.punchout_form.submit();
+}
+
+// 支付前的校验
+function beforeToPay(orderId) {
+
+    console.log(orderId);
+    var result;
+    $.ajax({
+        type:"get",
+        async:false,
+        url:"http://localhost:8082/api/portal/order/order-detail/"+orderId,
+        success:function (data,status) {
+            console.log("成功");
+            result = data.data;
+        },
+        error:function (status) {
+            result = status;
+        }
+    });
+
+
+
+    // 查找订单状态 用户已经支付 刷新
+    console.log(result);
+    if (result.status == 1){
+        alert("订单已经支付");
+        window.location.href="mesys_user_info.html?option=1";
+    }else if (result.status == 2){
+        alert("订单已经完成");
+        window.location.href="mesys_user_info.html?option=1";
+
+    }else{
+        // 查找订单状态 用户未支付
+        var time;
+        $.ajax({
+            type:"get",
+            async:false,
+            url:"http://localhost:8082/api/portal/order/unpay-order-rest-time/"+orderId,
+            success:function (data,status) {
+                time = data.data;
+            },
+            error:function (status) {
+                time = status;
+            }
+        });
+
+        if (time == 0){
+            //订单过期  刷新
+            alert("订单已过期");
+            window.location.href="mesys_user_info.html?option=1";
+        }else{
+            // 用户未支付 订单未过期 正常 跳转到支付
+            return ;
+        }
+
+    }
+
+
 }
 
 function getHtml(orderId){
